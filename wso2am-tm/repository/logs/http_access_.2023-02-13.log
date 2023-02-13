@@ -1,0 +1,4 @@
+127.0.0.1 - - [13/Feb/2023:10:46:02 +0700] GET /internal/data/v1/subscription-policies HTTP/1.1 200 483 - Apache-HttpClient/4.5.13 (Java/11.0.17) 1.713
+127.0.0.1 - - [13/Feb/2023:10:46:02 +0700] GET /internal/data/v1/application-policies HTTP/1.1 200 259 - Apache-HttpClient/4.5.13 (Java/11.0.17) 0.016
+127.0.0.1 - - [13/Feb/2023:10:46:02 +0700] GET /internal/data/v1/api-policies HTTP/1.1 200 320 - Apache-HttpClient/4.5.13 (Java/11.0.17) 0.033
+127.0.0.1 - - [13/Feb/2023:10:46:02 +0700] GET /internal/data/v1/global-policies HTTP/1.1 200 39 - Apache-HttpClient/4.5.13 (Java/11.0.17) 0.009

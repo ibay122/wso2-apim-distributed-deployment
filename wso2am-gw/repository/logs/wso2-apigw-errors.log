@@ -1,0 +1,497 @@
+2023-02-13T10:43:34,786 [-] [Component Resolve Thread] ERROR DataSourceServiceComponent Error in intializing system data sources: Error in initializing system data sources: Error in initializing system data sources at '/media/iqbal/nvme_data/wso2am_exam/wso2am-gw/repository/conf/datasources/master-datasources.xml' - [com.ctc.wstx.exc.WstxLazyException] Unexpected character '=' (code 61); expected a semi-colon after the reference for entity 'allowPublicKeyRetrieval'
+ at [row,col {unknown-source}]: [39,104]
+org.wso2.carbon.ndatasource.common.DataSourceException: Error in initializing system data sources: Error in initializing system data sources at '/media/iqbal/nvme_data/wso2am_exam/wso2am-gw/repository/conf/datasources/master-datasources.xml' - [com.ctc.wstx.exc.WstxLazyException] Unexpected character '=' (code 61); expected a semi-colon after the reference for entity 'allowPublicKeyRetrieval'
+ at [row,col {unknown-source}]: [39,104]
+	at org.wso2.carbon.ndatasource.core.DataSourceManager.initSystemDataSources(DataSourceManager.java:169) ~[org.wso2.carbon.ndatasource.core_4.6.2.jar:?]
+	at org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.initSystemDataSources(DataSourceServiceComponent.java:206) [org.wso2.carbon.ndatasource.core_4.6.2.jar:?]
+	at org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.setSecretCallbackHandlerService(DataSourceServiceComponent.java:192) [org.wso2.carbon.ndatasource.core_4.6.2.jar:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.eclipse.equinox.internal.ds.model.ComponentReference.bind(ComponentReference.java:376) [org.eclipse.equinox.ds_1.4.400.v20160226-2036.jar:?]
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.bindReference(ServiceComponentProp.java:430) [org.eclipse.equinox.ds_1.4.400.v20160226-2036.jar:?]
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.bind(ServiceComponentProp.java:218) [org.eclipse.equinox.ds_1.4.400.v20160226-2036.jar:?]
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:343) [org.eclipse.equinox.ds_1.4.400.v20160226-2036.jar:?]
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620) [org.eclipse.equinox.ds_1.4.400.v20160226-2036.jar:?]
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197) [org.eclipse.equinox.ds_1.4.400.v20160226-2036.jar:?]
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343) [org.eclipse.equinox.ds_1.4.400.v20160226-2036.jar:?]
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222) [org.eclipse.equinox.ds_1.4.400.v20160226-2036.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:113) [org.eclipse.osgi_3.14.0.v20190517-1309.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:985) [org.eclipse.osgi_3.14.0.v20190517-1309.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234) [org.eclipse.osgi_3.14.0.v20190517-1309.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151) [org.eclipse.osgi_3.14.0.v20190517-1309.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:866) [org.eclipse.osgi_3.14.0.v20190517-1309.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:804) [org.eclipse.osgi_3.14.0.v20190517-1309.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130) [org.eclipse.osgi_3.14.0.v20190517-1309.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:228) [org.eclipse.osgi_3.14.0.v20190517-1309.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:525) [org.eclipse.osgi_3.14.0.v20190517-1309.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:544) [org.eclipse.osgi_3.14.0.v20190517-1309.jar:?]
+	at org.wso2.carbon.securevault.internal.SecretManagerInitializerComponent.activate(SecretManagerInitializerComponent.java:49) [org.wso2.carbon.securevault_4.6.2.jar:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260) [org.eclipse.equinox.ds_1.4.400.v20160226-2036.jar:?]
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146) [org.eclipse.equinox.ds_1.4.400.v20160226-2036.jar:?]
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345) [org.eclipse.equinox.ds_1.4.400.v20160226-2036.jar:?]
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620) [org.eclipse.equinox.ds_1.4.400.v20160226-2036.jar:?]
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197) [org.eclipse.equinox.ds_1.4.400.v20160226-2036.jar:?]
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473) [org.eclipse.equinox.ds_1.4.400.v20160226-2036.jar:?]
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217) [org.eclipse.equinox.ds_1.4.400.v20160226-2036.jar:?]
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816) [org.eclipse.equinox.ds_1.4.400.v20160226-2036.jar:?]
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783) [org.eclipse.equinox.ds_1.4.400.v20160226-2036.jar:?]
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89) [org.eclipse.equinox.ds_1.4.400.v20160226-2036.jar:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+Caused by: org.wso2.carbon.ndatasource.common.DataSourceException: Error in initializing system data sources at '/media/iqbal/nvme_data/wso2am_exam/wso2am-gw/repository/conf/datasources/master-datasources.xml' - [com.ctc.wstx.exc.WstxLazyException] Unexpected character '=' (code 61); expected a semi-colon after the reference for entity 'allowPublicKeyRetrieval'
+ at [row,col {unknown-source}]: [39,104]
+	at org.wso2.carbon.ndatasource.core.DataSourceManager.initSystemDataSource(DataSourceManager.java:190) ~[org.wso2.carbon.ndatasource.core_4.6.2.jar:?]
+	at org.wso2.carbon.ndatasource.core.DataSourceManager.initSystemDataSources(DataSourceManager.java:157) ~[org.wso2.carbon.ndatasource.core_4.6.2.jar:?]
+	... 40 more
+Caused by: com.ctc.wstx.exc.WstxLazyException: [com.ctc.wstx.exc.WstxLazyException] Unexpected character '=' (code 61); expected a semi-colon after the reference for entity 'allowPublicKeyRetrieval'
+ at [row,col {unknown-source}]: [39,104]
+	at com.ctc.wstx.exc.WstxLazyException.throwLazily(WstxLazyException.java:45) ~[axiom_1.2.11.wso2v17.jar:?]
+	at com.ctc.wstx.sr.StreamScanner.throwLazyError(StreamScanner.java:720) ~[axiom_1.2.11.wso2v17.jar:?]
+	at com.ctc.wstx.sr.BasicStreamReader.safeFinishToken(BasicStreamReader.java:3677) ~[axiom_1.2.11.wso2v17.jar:?]
+	at com.ctc.wstx.sr.BasicStreamReader.getText(BasicStreamReader.java:858) ~[axiom_1.2.11.wso2v17.jar:?]
+	at org.apache.axiom.om.impl.builder.StAXBuilder.createOMText(StAXBuilder.java:289) ~[axiom_1.2.11.wso2v17.jar:?]
+	at org.apache.axiom.om.impl.builder.StAXBuilder.createOMText(StAXBuilder.java:250) ~[axiom_1.2.11.wso2v17.jar:?]
+	at org.apache.axiom.om.impl.builder.StAXOMBuilder.next(StAXOMBuilder.java:252) ~[axiom_1.2.11.wso2v17.jar:?]
+	at org.apache.axiom.om.impl.llom.OMElementImpl.getNextOMSibling(OMElementImpl.java:336) ~[axiom_1.2.11.wso2v17.jar:?]
+	at org.apache.axiom.om.impl.traverse.OMChildrenIterator.getNextNode(OMChildrenIterator.java:36) ~[axiom_1.2.11.wso2v17.jar:?]
+	at org.apache.axiom.om.impl.traverse.OMAbstractIterator.hasNext(OMAbstractIterator.java:58) ~[axiom_1.2.11.wso2v17.jar:?]
+	at org.apache.axiom.om.impl.traverse.OMFilterIterator.hasNext(OMFilterIterator.java:54) ~[axiom_1.2.11.wso2v17.jar:?]
+	at org.wso2.securevault.SecretResolverFactory.create(SecretResolverFactory.java:160) ~[org.wso2.securevault_1.1.3.1.jar:?]
+	at org.wso2.carbon.ndatasource.core.utils.DataSourceUtils.secureResolveOMElement(DataSourceUtils.java:317) ~[org.wso2.carbon.ndatasource.core_4.6.2.jar:?]
+	at org.wso2.carbon.ndatasource.core.DataSourceManager.initSystemDataSource(DataSourceManager.java:178) ~[org.wso2.carbon.ndatasource.core_4.6.2.jar:?]
+	at org.wso2.carbon.ndatasource.core.DataSourceManager.initSystemDataSources(DataSourceManager.java:157) ~[org.wso2.carbon.ndatasource.core_4.6.2.jar:?]
+	... 40 more
+Caused by: com.ctc.wstx.exc.WstxUnexpectedCharException: Unexpected character '=' (code 61); expected a semi-colon after the reference for entity 'allowPublicKeyRetrieval'
+ at [row,col {unknown-source}]: [39,104]
+	at com.ctc.wstx.sr.StreamScanner.throwUnexpectedChar(StreamScanner.java:639) ~[axiom_1.2.11.wso2v17.jar:?]
+	at com.ctc.wstx.sr.StreamScanner.parseEntityName(StreamScanner.java:2059) ~[axiom_1.2.11.wso2v17.jar:?]
+	at com.ctc.wstx.sr.StreamScanner.fullyResolveEntity(StreamScanner.java:1517) ~[axiom_1.2.11.wso2v17.jar:?]
+	at com.ctc.wstx.sr.BasicStreamReader.readTextSecondary(BasicStreamReader.java:4701) ~[axiom_1.2.11.wso2v17.jar:?]
+	at com.ctc.wstx.sr.BasicStreamReader.readCoalescedText(BasicStreamReader.java:4147) ~[axiom_1.2.11.wso2v17.jar:?]
+	at com.ctc.wstx.sr.BasicStreamReader.finishToken(BasicStreamReader.java:3719) ~[axiom_1.2.11.wso2v17.jar:?]
+	at com.ctc.wstx.sr.BasicStreamReader.safeFinishToken(BasicStreamReader.java:3675) ~[axiom_1.2.11.wso2v17.jar:?]
+	at com.ctc.wstx.sr.BasicStreamReader.getText(BasicStreamReader.java:858) ~[axiom_1.2.11.wso2v17.jar:?]
+	at org.apache.axiom.om.impl.builder.StAXBuilder.createOMText(StAXBuilder.java:289) ~[axiom_1.2.11.wso2v17.jar:?]
+	at org.apache.axiom.om.impl.builder.StAXBuilder.createOMText(StAXBuilder.java:250) ~[axiom_1.2.11.wso2v17.jar:?]
+	at org.apache.axiom.om.impl.builder.StAXOMBuilder.next(StAXOMBuilder.java:252) ~[axiom_1.2.11.wso2v17.jar:?]
+	at org.apache.axiom.om.impl.llom.OMElementImpl.getNextOMSibling(OMElementImpl.java:336) ~[axiom_1.2.11.wso2v17.jar:?]
+	at org.apache.axiom.om.impl.traverse.OMChildrenIterator.getNextNode(OMChildrenIterator.java:36) ~[axiom_1.2.11.wso2v17.jar:?]
+	at org.apache.axiom.om.impl.traverse.OMAbstractIterator.hasNext(OMAbstractIterator.java:58) ~[axiom_1.2.11.wso2v17.jar:?]
+	at org.apache.axiom.om.impl.traverse.OMFilterIterator.hasNext(OMFilterIterator.java:54) ~[axiom_1.2.11.wso2v17.jar:?]
+	at org.wso2.securevault.SecretResolverFactory.create(SecretResolverFactory.java:160) ~[org.wso2.securevault_1.1.3.1.jar:?]
+	at org.wso2.carbon.ndatasource.core.utils.DataSourceUtils.secureResolveOMElement(DataSourceUtils.java:317) ~[org.wso2.carbon.ndatasource.core_4.6.2.jar:?]
+	at org.wso2.carbon.ndatasource.core.DataSourceManager.initSystemDataSource(DataSourceManager.java:178) ~[org.wso2.carbon.ndatasource.core_4.6.2.jar:?]
+	at org.wso2.carbon.ndatasource.core.DataSourceManager.initSystemDataSources(DataSourceManager.java:157) ~[org.wso2.carbon.ndatasource.core_4.6.2.jar:?]
+	... 40 more
+2023-02-13T10:43:35,185 [-] [Start Level: Equinox Container: 8d9cb2db-4957-451d-b712-c622a946fb94] ERROR Activator Cannot start User Manager Core bundle
+java.lang.RuntimeException: Error in looking up data source: Name [jdbc/SHARED_DB] is not bound in this Context. Unable to find [jdbc].
+	at org.wso2.carbon.user.core.util.DatabaseUtil.lookupDataSource(DatabaseUtil.java:98) ~[org.wso2.carbon.user.core_4.6.2.310.jar:?]
+	at org.wso2.carbon.user.core.util.DatabaseUtil.createRealmDataSource(DatabaseUtil.java:341) ~[org.wso2.carbon.user.core_4.6.2.310.jar:?]
+	at org.wso2.carbon.user.core.util.DatabaseUtil.getRealmDataSource(DatabaseUtil.java:78) ~[org.wso2.carbon.user.core_4.6.2.310.jar:?]
+	at org.wso2.carbon.user.core.common.DefaultRealmService.<init>(DefaultRealmService.java:90) ~[org.wso2.carbon.user.core_4.6.2.310.jar:?]
+	at org.wso2.carbon.user.core.common.DefaultRealmService.<init>(DefaultRealmService.java:115) ~[org.wso2.carbon.user.core_4.6.2.310.jar:?]
+	at org.wso2.carbon.user.core.internal.Activator.startDeploy(Activator.java:72) [org.wso2.carbon.user.core_4.6.2.310.jar:?]
+	at org.wso2.carbon.user.core.internal.BundleCheckActivator.start(BundleCheckActivator.java:61) [org.wso2.carbon.user.core_4.6.2.310.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:842) [org.eclipse.osgi_3.14.0.v20190517-1309.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1) [org.eclipse.osgi_3.14.0.v20190517-1309.jar:?]
+	at java.security.AccessController.doPrivileged(Native Method) [?:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:834) [org.eclipse.osgi_3.14.0.v20190517-1309.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:791) [org.eclipse.osgi_3.14.0.v20190517-1309.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1013) [org.eclipse.osgi_3.14.0.v20190517-1309.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365) [org.eclipse.osgi_3.14.0.v20190517-1309.jar:?]
+	at org.eclipse.osgi.container.Module.doStart(Module.java:598) [org.eclipse.osgi_3.14.0.v20190517-1309.jar:?]
+	at org.eclipse.osgi.container.Module.start(Module.java:462) [org.eclipse.osgi_3.14.0.v20190517-1309.jar:?]
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$1.run(ModuleContainer.java:1820) [org.eclipse.osgi_3.14.0.v20190517-1309.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$2$1.execute(EquinoxContainerAdaptor.java:150) [org.eclipse.osgi_3.14.0.v20190517-1309.jar:?]
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1813) [org.eclipse.osgi_3.14.0.v20190517-1309.jar:?]
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1770) [org.eclipse.osgi_3.14.0.v20190517-1309.jar:?]
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1735) [org.eclipse.osgi_3.14.0.v20190517-1309.jar:?]
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1661) [org.eclipse.osgi_3.14.0.v20190517-1309.jar:?]
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1) [org.eclipse.osgi_3.14.0.v20190517-1309.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234) [org.eclipse.osgi_3.14.0.v20190517-1309.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345) [org.eclipse.osgi_3.14.0.v20190517-1309.jar:?]
+Caused by: javax.naming.NameNotFoundException: Name [jdbc/SHARED_DB] is not bound in this Context. Unable to find [jdbc].
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:840) ~[tomcat_9.0.52.wso2v2.jar:?]
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:172) ~[tomcat_9.0.52.wso2v2.jar:?]
+	at org.wso2.carbon.context.internal.CarbonContextDataHolder$CarbonInitialJNDIContext.lookup(CarbonContextDataHolder.java:709) ~[?:?]
+	at javax.naming.InitialContext.lookup(InitialContext.java:409) ~[?:?]
+	at javax.naming.InitialContext.doLookup(InitialContext.java:282) ~[?:?]
+	at org.wso2.carbon.user.core.util.DatabaseUtil.lookupDataSource(DatabaseUtil.java:96) ~[org.wso2.carbon.user.core_4.6.2.310.jar:?]
+	... 24 more
+2023-02-13T10:44:27,213 [-] [Start Level: Equinox Container: 5c71ad50-a64a-448f-88cd-5c771728957d]  WARN RegistryConfigurationProcessor Could not find the handler class org.wso2.is.key.manager.core.handlers.TenantConfigMediaTypeHandler. This handler will not be registered. All handler and filter classes should be in the class path of the Registry.
+2023-02-13T10:44:33,876 [-] [Framework Event Dispatcher: Equinox Container: 5c71ad50-a64a-448f-88cd-5c771728957d]  WARN ApplicationManagementServiceComponent Templates directory not found at /media/iqbal/nvme_data/wso2am_exam/wso2am-gw/repository/resources/identity/authntemplates
+2023-02-13T10:44:35,373 [-] [Framework Event Dispatcher: Equinox Container: 5c71ad50-a64a-448f-88cd-5c771728957d]  WARN IdentityEventServiceComponent Properties for userPostSelfRegistration is not configured. This event handler will not be activated
+2023-02-13T10:44:46,918 [-] [Framework Event Dispatcher: Equinox Container: 5c71ad50-a64a-448f-88cd-5c771728957d]  WARN SSLUtilBase The trusted certificate with alias [thawtepremiumserverca] and DN [EMAILADDRESS=premium-server@thawte.com, CN=Thawte Premium Server CA, OU=Certification Services Division, O=Thawte Consulting cc, L=Cape Town, ST=Western Cape, C=ZA] is not valid due to [NotAfter: Sat Jan 02 06:59:59 WIB 2021]. Certificates signed by this trusted certificate WILL be accepted
+2023-02-13T10:44:46,920 [-] [Framework Event Dispatcher: Equinox Container: 5c71ad50-a64a-448f-88cd-5c771728957d]  WARN SSLUtilBase The trusted certificate with alias [identrustdstx3] and DN [CN=DST Root CA X3, O=Digital Signature Trust Co.] is not valid due to [NotAfter: Thu Sep 30 21:01:15 WIB 2021]. Certificates signed by this trusted certificate WILL be accepted
+2023-02-13T10:44:46,920 [-] [Framework Event Dispatcher: Equinox Container: 5c71ad50-a64a-448f-88cd-5c771728957d]  WARN SSLUtilBase The trusted certificate with alias [addtrustclass1ca] and DN [CN=AddTrust Class 1 CA Root, OU=AddTrust TTP Network, O=AddTrust AB, C=SE] is not valid due to [NotAfter: Sat May 30 17:38:31 WIB 2020]. Certificates signed by this trusted certificate WILL be accepted
+2023-02-13T10:44:46,921 [-] [Framework Event Dispatcher: Equinox Container: 5c71ad50-a64a-448f-88cd-5c771728957d]  WARN SSLUtilBase The trusted certificate with alias [wso2carbon] and DN [CN=localhost, OU=WSO2, O=WSO2, L=Mountain View, ST=CA, C=US] is not valid due to [NotAfter: Tue Jan 25 14:30:43 WIB 2022]. Certificates signed by this trusted certificate WILL be accepted
+2023-02-13T10:44:46,921 [-] [Framework Event Dispatcher: Equinox Container: 5c71ad50-a64a-448f-88cd-5c771728957d]  WARN SSLUtilBase The trusted certificate with alias [mzyxmmfkogywmwi0zwnmndcxngywymm4zta3mwi2ndazzgqzngm0zgrlnjjkodfkzdriotfkmwfhmzu2zgvlng_rs256] and DN [CN=localhost, OU=WSO2, O=WSO2, L=Mountain View, ST=CA, C=US] is not valid due to [NotAfter: Tue Jan 25 14:30:43 WIB 2022]. Certificates signed by this trusted certificate WILL be accepted
+2023-02-13T10:44:46,921 [-] [Framework Event Dispatcher: Equinox Container: 5c71ad50-a64a-448f-88cd-5c771728957d]  WARN SSLUtilBase The trusted certificate with alias [gateway_certificate_alias] and DN [CN=localhost, OU=WSO2, O=WSO2, L=Mountain View, ST=CA, C=US] is not valid due to [NotAfter: Tue Jan 25 14:30:43 WIB 2022]. Certificates signed by this trusted certificate WILL be accepted
+2023-02-13T10:44:46,922 [-] [Framework Event Dispatcher: Equinox Container: 5c71ad50-a64a-448f-88cd-5c771728957d]  WARN SSLUtilBase The trusted certificate with alias [globalsignr2ca] and DN [CN=GlobalSign, O=GlobalSign, OU=GlobalSign Root CA - R2] is not valid due to [NotAfter: Wed Dec 15 15:00:00 WIB 2021]. Certificates signed by this trusted certificate WILL be accepted
+2023-02-13T10:44:46,922 [-] [Framework Event Dispatcher: Equinox Container: 5c71ad50-a64a-448f-88cd-5c771728957d]  WARN SSLUtilBase The trusted certificate with alias [geotrustglobalca] and DN [CN=GeoTrust Global CA, O=GeoTrust Inc., C=US] is not valid due to [NotAfter: Sat May 21 11:00:00 WIB 2022]. Certificates signed by this trusted certificate WILL be accepted
+2023-02-13T10:44:46,922 [-] [Framework Event Dispatcher: Equinox Container: 5c71ad50-a64a-448f-88cd-5c771728957d]  WARN SSLUtilBase The trusted certificate with alias [soneraclass2ca] and DN [CN=Sonera Class2 CA, O=Sonera, C=FI] is not valid due to [NotAfter: Tue Apr 06 14:29:40 WIB 2021]. Certificates signed by this trusted certificate WILL be accepted
+2023-02-13T10:44:46,923 [-] [Framework Event Dispatcher: Equinox Container: 5c71ad50-a64a-448f-88cd-5c771728957d]  WARN SSLUtilBase The trusted certificate with alias [verisigntsaca] and DN [CN=Thawte Timestamping CA, OU=Thawte Certification, O=Thawte, L=Durbanville, ST=Western Cape, C=ZA] is not valid due to [NotAfter: Sat Jan 02 06:59:59 WIB 2021]. Certificates signed by this trusted certificate WILL be accepted
+2023-02-13T10:44:46,923 [-] [Framework Event Dispatcher: Equinox Container: 5c71ad50-a64a-448f-88cd-5c771728957d]  WARN SSLUtilBase The trusted certificate with alias [quovadisrootca] and DN [CN=QuoVadis Root Certification Authority, OU=Root Certification Authority, O=QuoVadis Limited, C=BM] is not valid due to [NotAfter: Thu Mar 18 01:33:33 WIB 2021]. Certificates signed by this trusted certificate WILL be accepted
+2023-02-13T10:44:46,923 [-] [Framework Event Dispatcher: Equinox Container: 5c71ad50-a64a-448f-88cd-5c771728957d]  WARN SSLUtilBase The trusted certificate with alias [addtrustqualifiedca] and DN [CN=AddTrust Qualified CA Root, OU=AddTrust TTP Network, O=AddTrust AB, C=SE] is not valid due to [NotAfter: Sat May 30 17:44:50 WIB 2020]. Certificates signed by this trusted certificate WILL be accepted
+2023-02-13T10:44:46,924 [-] [Framework Event Dispatcher: Equinox Container: 5c71ad50-a64a-448f-88cd-5c771728957d]  WARN SSLUtilBase The trusted certificate with alias [keynectisrootca] and DN [CN=KEYNECTIS ROOT CA, OU=ROOT, O=KEYNECTIS, C=FR] is not valid due to [NotAfter: Tue May 26 07:00:00 WIB 2020]. Certificates signed by this trusted certificate WILL be accepted
+2023-02-13T10:44:46,924 [-] [Framework Event Dispatcher: Equinox Container: 5c71ad50-a64a-448f-88cd-5c771728957d]  WARN SSLUtilBase The trusted certificate with alias [addtrustexternalca] and DN [CN=AddTrust External CA Root, OU=AddTrust External TTP Network, O=AddTrust AB, C=SE] is not valid due to [NotAfter: Sat May 30 17:48:38 WIB 2020]. Certificates signed by this trusted certificate WILL be accepted
+2023-02-13T10:44:46,924 [-] [Framework Event Dispatcher: Equinox Container: 5c71ad50-a64a-448f-88cd-5c771728957d]  WARN SSLUtilBase The trusted certificate with alias [luxtrustglobalrootca] and DN [CN=LuxTrust Global Root, O=LuxTrust s.a., C=LU] is not valid due to [NotAfter: Wed Mar 17 16:51:37 WIB 2021]. Certificates signed by this trusted certificate WILL be accepted
+2023-02-13T10:47:55,287 [-] [ExceptionNotifyingThread-1] ERROR JMSTaskManager JMS Connection failed : Exception thrown against AMQConnection:
+Host: localhost
+Port: 5672
+Virtual Host: carbon
+Client ID: clientid
+Active session count: 1 - shutting down worker tasks
+2023-02-13T10:47:55,287 [-] [ExceptionNotifyingThread-0] ERROR JMSTaskManager JMS Connection failed : Exception thrown against AMQConnection:
+Host: localhost
+Port: 5672
+Virtual Host: carbon
+Client ID: clientid
+Active session count: 1 - shutting down worker tasks
+2023-02-13T10:47:55,288 [-] [ExceptionNotifyingThread-2] ERROR JMSTaskManager JMS Connection failed : Exception thrown against AMQConnection:
+Host: localhost
+Port: 5672
+Virtual Host: carbon
+Client ID: clientid
+Active session count: 1 - shutting down worker tasks
+2023-02-13T10:47:55,290 [-] [ExceptionNotifyingThread-3] ERROR JMSTaskManager JMS Connection failed : Exception thrown against AMQConnection:
+Host: localhost
+Port: 5672
+Virtual Host: carbon
+Client ID: clientid
+Active session count: 1 - shutting down worker tasks
+2023-02-13T10:47:55,293 [-] [ExceptionNotifyingThread-5] ERROR JMSTaskManager JMS Connection failed : Exception thrown against AMQConnection:
+Host: localhost
+Port: 5672
+Virtual Host: carbon
+Client ID: clientid
+Active session count: 1 - shutting down worker tasks
+2023-02-13T10:47:55,293 [-] [ExceptionNotifyingThread-4] ERROR JMSTaskManager JMS Connection failed : Exception thrown against AMQConnection:
+Host: localhost
+Port: 5672
+Virtual Host: carbon
+Client ID: clientid
+Active session count: 1 - shutting down worker tasks
+2023-02-13T10:47:55,287 [-] [JMSThreads1e6c1b99-a0b2-4b42-9eac-70922df5ac7d-1] ERROR JMSTaskManager Error receiving message for Siddhi-JMS-Consumer
+javax.jms.JMSException: Message consumer forcibly closed due to error: org.wso2.andes.AMQDisconnectedException: Server closed connection and no failover was successful
+	at org.wso2.andes.client.BasicMessageConsumer.returnMessageOrThrow(BasicMessageConsumer.java:594) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.BasicMessageConsumer.receive(BasicMessageConsumer.java:473) ~[andes_3.3.11.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:627) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172) [axis2_1.6.1.wso2v63_3.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+Caused by: org.wso2.andes.AMQDisconnectedException: Server closed connection and no failover was successful
+	at org.wso2.andes.client.failover.FailoverHandler.run(FailoverHandler.java:192) ~[andes_3.3.11.jar:?]
+	... 1 more
+2023-02-13T10:47:55,292 [-] [JMSThreadsba726525-05f7-4470-a212-558992866529-1] ERROR JMSTaskManager Error receiving message for Siddhi-JMS-Consumer
+javax.jms.JMSException: Message consumer forcibly closed due to error: org.wso2.andes.AMQDisconnectedException: Server closed connection and no failover was successful
+	at org.wso2.andes.client.BasicMessageConsumer.returnMessageOrThrow(BasicMessageConsumer.java:594) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.BasicMessageConsumer.receive(BasicMessageConsumer.java:473) ~[andes_3.3.11.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:627) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172) [axis2_1.6.1.wso2v63_3.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+Caused by: org.wso2.andes.AMQDisconnectedException: Server closed connection and no failover was successful
+	at org.wso2.andes.client.failover.FailoverHandler.run(FailoverHandler.java:192) ~[andes_3.3.11.jar:?]
+	... 1 more
+2023-02-13T10:47:55,287 [-] [JMSThreads69a4d900-9f64-46fb-8001-6920e998b12a-1] ERROR JMSTaskManager Error receiving message for Siddhi-JMS-Consumer
+javax.jms.JMSException: Message consumer forcibly closed due to error: org.wso2.andes.AMQDisconnectedException: Server closed connection and no failover was successful
+	at org.wso2.andes.client.BasicMessageConsumer.returnMessageOrThrow(BasicMessageConsumer.java:594) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.BasicMessageConsumer.receive(BasicMessageConsumer.java:473) ~[andes_3.3.11.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:627) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172) [axis2_1.6.1.wso2v63_3.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+Caused by: org.wso2.andes.AMQDisconnectedException: Server closed connection and no failover was successful
+	at org.wso2.andes.client.failover.FailoverHandler.run(FailoverHandler.java:192) ~[andes_3.3.11.jar:?]
+	... 1 more
+2023-02-13T10:47:55,292 [-] [JMSThreadsab1df5fd-b9f5-46f6-8192-89a7c9c3b890-1] ERROR JMSTaskManager Error receiving message for Siddhi-JMS-Consumer
+javax.jms.JMSException: Message consumer forcibly closed due to error: org.wso2.andes.AMQDisconnectedException: Server closed connection and no failover was successful
+	at org.wso2.andes.client.BasicMessageConsumer.returnMessageOrThrow(BasicMessageConsumer.java:594) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.BasicMessageConsumer.receive(BasicMessageConsumer.java:473) ~[andes_3.3.11.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:627) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172) [axis2_1.6.1.wso2v63_3.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+Caused by: org.wso2.andes.AMQDisconnectedException: Server closed connection and no failover was successful
+	at org.wso2.andes.client.failover.FailoverHandler.run(FailoverHandler.java:192) ~[andes_3.3.11.jar:?]
+	... 1 more
+2023-02-13T10:47:55,289 [-] [JMSThreads615ec501-8c46-4d57-b537-2302f39b846f-1] ERROR JMSTaskManager Error receiving message for Siddhi-JMS-Consumer
+javax.jms.JMSException: Message consumer forcibly closed due to error: org.wso2.andes.AMQDisconnectedException: Server closed connection and no failover was successful
+	at org.wso2.andes.client.BasicMessageConsumer.returnMessageOrThrow(BasicMessageConsumer.java:594) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.BasicMessageConsumer.receive(BasicMessageConsumer.java:473) ~[andes_3.3.11.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:627) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172) [axis2_1.6.1.wso2v63_3.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+Caused by: org.wso2.andes.AMQDisconnectedException: Server closed connection and no failover was successful
+	at org.wso2.andes.client.failover.FailoverHandler.run(FailoverHandler.java:192) ~[andes_3.3.11.jar:?]
+	... 1 more
+2023-02-13T10:47:55,288 [-] [JMSThreads8c30f0fe-bf56-44b7-bd6c-417e1715a694-1] ERROR JMSTaskManager Error receiving message for Siddhi-JMS-Consumer
+javax.jms.JMSException: Message consumer forcibly closed due to error: org.wso2.andes.AMQDisconnectedException: Server closed connection and no failover was successful
+	at org.wso2.andes.client.BasicMessageConsumer.returnMessageOrThrow(BasicMessageConsumer.java:594) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.BasicMessageConsumer.receive(BasicMessageConsumer.java:473) ~[andes_3.3.11.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:627) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172) [axis2_1.6.1.wso2v63_3.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+Caused by: org.wso2.andes.AMQDisconnectedException: Server closed connection and no failover was successful
+	at org.wso2.andes.client.failover.FailoverHandler.run(FailoverHandler.java:192) ~[andes_3.3.11.jar:?]
+	... 1 more
+2023-02-13T10:47:56,548 [-] [JMSThreads615ec501-8c46-4d57-b537-2302f39b846f-2] ERROR JMSTaskManager Error acquiring a JMS connection to : TopicConnectionFactory using JNDI properties : {java.naming.factory.initial=org.wso2.andes.jndi.PropertiesFileInitialContextFactory, transport.jms.DestinationType=topic, connectionfactory.TopicConnectionFactory=amqp://***:***@clientid/carbon?brokerlist='tcp://localhost:5672?retries='5'&connectdelay='50';tcp://localhost:5672?retries='5'&connectdelay='50';'}
+javax.jms.JMSException: Error creating connection: Could not open connection
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:346) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:53) ~[andes_3.3.11.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.utils.JMSUtils.createConnection(JMSUtils.java:410) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.createConnection(JMSTaskManager.java:950) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.getConnection(JMSTaskManager.java:829) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:610) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172) [axis2_1.6.1.wso2v63_3.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+Caused by: org.wso2.andes.AMQConnectionFailureException: Could not open connection
+	at org.wso2.andes.client.AMQConnection.<init>(AMQConnection.java:496) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:328) ~[andes_3.3.11.jar:?]
+	... 10 more
+Caused by: org.wso2.andes.transport.TransportException: Could not open connection
+	at org.wso2.andes.transport.network.mina.MinaNetworkTransport$IoConnectorCreator.connect(MinaNetworkTransport.java:224) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.transport.network.mina.MinaNetworkTransport.connect(MinaNetworkTransport.java:82) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnectionDelegate_8_0.makeBrokerConnection(AMQConnectionDelegate_8_0.java:137) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnection$2.run(AMQConnection.java:641) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnection$2.run(AMQConnection.java:638) ~[andes_3.3.11.jar:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at org.wso2.andes.client.AMQConnection.makeBrokerConnection(AMQConnection.java:638) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnection.<init>(AMQConnection.java:419) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:328) ~[andes_3.3.11.jar:?]
+	... 10 more
+2023-02-13T10:47:56,548 [-] [JMSThreads69a4d900-9f64-46fb-8001-6920e998b12a-2] ERROR JMSTaskManager Error acquiring a JMS connection to : TopicConnectionFactory using JNDI properties : {java.naming.factory.initial=org.wso2.andes.jndi.PropertiesFileInitialContextFactory, transport.jms.DestinationType=topic, connectionfactory.TopicConnectionFactory=amqp://***:***@clientid/carbon?brokerlist='tcp://localhost:5672?retries='5'&connectdelay='50';tcp://localhost:5672?retries='5'&connectdelay='50';'}
+javax.jms.JMSException: Error creating connection: Could not open connection
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:346) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:53) ~[andes_3.3.11.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.utils.JMSUtils.createConnection(JMSUtils.java:410) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.createConnection(JMSTaskManager.java:950) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.getConnection(JMSTaskManager.java:829) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:610) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172) [axis2_1.6.1.wso2v63_3.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+Caused by: org.wso2.andes.AMQConnectionFailureException: Could not open connection
+	at org.wso2.andes.client.AMQConnection.<init>(AMQConnection.java:496) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:328) ~[andes_3.3.11.jar:?]
+	... 10 more
+Caused by: org.wso2.andes.transport.TransportException: Could not open connection
+	at org.wso2.andes.transport.network.mina.MinaNetworkTransport$IoConnectorCreator.connect(MinaNetworkTransport.java:224) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.transport.network.mina.MinaNetworkTransport.connect(MinaNetworkTransport.java:82) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnectionDelegate_8_0.makeBrokerConnection(AMQConnectionDelegate_8_0.java:137) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnection$2.run(AMQConnection.java:641) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnection$2.run(AMQConnection.java:638) ~[andes_3.3.11.jar:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at org.wso2.andes.client.AMQConnection.makeBrokerConnection(AMQConnection.java:638) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnection.<init>(AMQConnection.java:419) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:328) ~[andes_3.3.11.jar:?]
+	... 10 more
+2023-02-13T10:47:56,551 [-] [JMSThreadsba726525-05f7-4470-a212-558992866529-2] ERROR JMSTaskManager Error acquiring a JMS connection to : TopicConnectionFactory using JNDI properties : {java.naming.factory.initial=org.wso2.andes.jndi.PropertiesFileInitialContextFactory, transport.jms.DestinationType=topic, connectionfactory.TopicConnectionFactory=amqp://***:***@clientid/carbon?brokerlist='tcp://localhost:5672?retries='5'&connectdelay='50';tcp://localhost:5672?retries='5'&connectdelay='50';'}
+javax.jms.JMSException: Error creating connection: Could not open connection
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:346) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:53) ~[andes_3.3.11.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.utils.JMSUtils.createConnection(JMSUtils.java:410) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.createConnection(JMSTaskManager.java:950) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.getConnection(JMSTaskManager.java:829) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:610) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172) [axis2_1.6.1.wso2v63_3.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+Caused by: org.wso2.andes.AMQConnectionFailureException: Could not open connection
+	at org.wso2.andes.client.AMQConnection.<init>(AMQConnection.java:496) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:328) ~[andes_3.3.11.jar:?]
+	... 10 more
+Caused by: org.wso2.andes.transport.TransportException: Could not open connection
+	at org.wso2.andes.transport.network.mina.MinaNetworkTransport$IoConnectorCreator.connect(MinaNetworkTransport.java:224) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.transport.network.mina.MinaNetworkTransport.connect(MinaNetworkTransport.java:82) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnectionDelegate_8_0.makeBrokerConnection(AMQConnectionDelegate_8_0.java:137) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnection$2.run(AMQConnection.java:641) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnection$2.run(AMQConnection.java:638) ~[andes_3.3.11.jar:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at org.wso2.andes.client.AMQConnection.makeBrokerConnection(AMQConnection.java:638) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnection.<init>(AMQConnection.java:419) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:328) ~[andes_3.3.11.jar:?]
+	... 10 more
+2023-02-13T10:47:56,551 [-] [JMSThreadsab1df5fd-b9f5-46f6-8192-89a7c9c3b890-2] ERROR JMSTaskManager Error acquiring a JMS connection to : TopicConnectionFactory using JNDI properties : {java.naming.factory.initial=org.wso2.andes.jndi.PropertiesFileInitialContextFactory, transport.jms.DestinationType=topic, connectionfactory.TopicConnectionFactory=amqp://***:***@clientid/carbon?brokerlist='tcp://localhost:5672?retries='5'&connectdelay='50';tcp://localhost:5672?retries='5'&connectdelay='50';'}
+javax.jms.JMSException: Error creating connection: Could not open connection
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:346) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:53) ~[andes_3.3.11.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.utils.JMSUtils.createConnection(JMSUtils.java:410) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.createConnection(JMSTaskManager.java:950) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.getConnection(JMSTaskManager.java:829) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:610) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172) [axis2_1.6.1.wso2v63_3.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+Caused by: org.wso2.andes.AMQConnectionFailureException: Could not open connection
+	at org.wso2.andes.client.AMQConnection.<init>(AMQConnection.java:496) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:328) ~[andes_3.3.11.jar:?]
+	... 10 more
+Caused by: org.wso2.andes.transport.TransportException: Could not open connection
+	at org.wso2.andes.transport.network.mina.MinaNetworkTransport$IoConnectorCreator.connect(MinaNetworkTransport.java:224) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.transport.network.mina.MinaNetworkTransport.connect(MinaNetworkTransport.java:82) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnectionDelegate_8_0.makeBrokerConnection(AMQConnectionDelegate_8_0.java:137) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnection$2.run(AMQConnection.java:641) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnection$2.run(AMQConnection.java:638) ~[andes_3.3.11.jar:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at org.wso2.andes.client.AMQConnection.makeBrokerConnection(AMQConnection.java:638) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnection.<init>(AMQConnection.java:419) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:328) ~[andes_3.3.11.jar:?]
+	... 10 more
+2023-02-13T10:47:56,548 [-] [JMSThreads8c30f0fe-bf56-44b7-bd6c-417e1715a694-2] ERROR JMSTaskManager Error acquiring a JMS connection to : TopicConnectionFactory using JNDI properties : {java.naming.factory.initial=org.wso2.andes.jndi.PropertiesFileInitialContextFactory, transport.jms.DestinationType=topic, connectionfactory.TopicConnectionFactory=amqp://***:***@clientid/carbon?brokerlist='tcp://localhost:5672?retries='5'&connectdelay='50';tcp://localhost:5672?retries='5'&connectdelay='50';'}
+javax.jms.JMSException: Error creating connection: Could not open connection
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:346) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:53) ~[andes_3.3.11.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.utils.JMSUtils.createConnection(JMSUtils.java:410) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.createConnection(JMSTaskManager.java:950) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.getConnection(JMSTaskManager.java:829) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:610) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172) [axis2_1.6.1.wso2v63_3.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+Caused by: org.wso2.andes.AMQConnectionFailureException: Could not open connection
+	at org.wso2.andes.client.AMQConnection.<init>(AMQConnection.java:496) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:328) ~[andes_3.3.11.jar:?]
+	... 10 more
+Caused by: org.wso2.andes.transport.TransportException: Could not open connection
+	at org.wso2.andes.transport.network.mina.MinaNetworkTransport$IoConnectorCreator.connect(MinaNetworkTransport.java:224) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.transport.network.mina.MinaNetworkTransport.connect(MinaNetworkTransport.java:82) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnectionDelegate_8_0.makeBrokerConnection(AMQConnectionDelegate_8_0.java:137) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnection$2.run(AMQConnection.java:641) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnection$2.run(AMQConnection.java:638) ~[andes_3.3.11.jar:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at org.wso2.andes.client.AMQConnection.makeBrokerConnection(AMQConnection.java:638) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnection.<init>(AMQConnection.java:419) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:328) ~[andes_3.3.11.jar:?]
+	... 10 more
+2023-02-13T10:47:56,548 [-] [JMSThreads1e6c1b99-a0b2-4b42-9eac-70922df5ac7d-2] ERROR JMSTaskManager Error acquiring a JMS connection to : TopicConnectionFactory using JNDI properties : {java.naming.factory.initial=org.wso2.andes.jndi.PropertiesFileInitialContextFactory, transport.jms.DestinationType=topic, connectionfactory.TopicConnectionFactory=amqp://***:***@clientid/carbon?brokerlist='tcp://localhost:5672?retries='5'&connectdelay='50';tcp://localhost:5672?retries='5'&connectdelay='50';'}
+javax.jms.JMSException: Error creating connection: Could not open connection
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:346) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:53) ~[andes_3.3.11.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.utils.JMSUtils.createConnection(JMSUtils.java:410) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.createConnection(JMSTaskManager.java:950) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.getConnection(JMSTaskManager.java:829) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:610) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533) [org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172) [axis2_1.6.1.wso2v63_3.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+Caused by: org.wso2.andes.AMQConnectionFailureException: Could not open connection
+	at org.wso2.andes.client.AMQConnection.<init>(AMQConnection.java:496) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:328) ~[andes_3.3.11.jar:?]
+	... 10 more
+Caused by: org.wso2.andes.transport.TransportException: Could not open connection
+	at org.wso2.andes.transport.network.mina.MinaNetworkTransport$IoConnectorCreator.connect(MinaNetworkTransport.java:224) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.transport.network.mina.MinaNetworkTransport.connect(MinaNetworkTransport.java:82) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnectionDelegate_8_0.makeBrokerConnection(AMQConnectionDelegate_8_0.java:137) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnection$2.run(AMQConnection.java:641) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnection$2.run(AMQConnection.java:638) ~[andes_3.3.11.jar:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at org.wso2.andes.client.AMQConnection.makeBrokerConnection(AMQConnection.java:638) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnection.<init>(AMQConnection.java:419) ~[andes_3.3.11.jar:?]
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:328) ~[andes_3.3.11.jar:?]
+	... 10 more
+2023-02-13T10:47:56,556 [-] [JMSThreadsba726525-05f7-4470-a212-558992866529-2] ERROR NativeWorkerPool Uncaught exception
+org.wso2.carbon.apimgt.common.jms.JmsRunTimeException: null
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager.handleException(JMSTaskManager.java:1144) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager.access$800(JMSTaskManager.java:62) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.createConnection(JMSTaskManager.java:969) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.getConnection(JMSTaskManager.java:829) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:610) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172) [axis2_1.6.1.wso2v63_3.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+2023-02-13T10:47:56,557 [-] [JMSThreads8c30f0fe-bf56-44b7-bd6c-417e1715a694-2] ERROR NativeWorkerPool Uncaught exception
+org.wso2.carbon.apimgt.common.jms.JmsRunTimeException: null
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager.handleException(JMSTaskManager.java:1144) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager.access$800(JMSTaskManager.java:62) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.createConnection(JMSTaskManager.java:969) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.getConnection(JMSTaskManager.java:829) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:610) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172) [axis2_1.6.1.wso2v63_3.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+2023-02-13T10:47:56,557 [-] [JMSThreads1e6c1b99-a0b2-4b42-9eac-70922df5ac7d-2] ERROR NativeWorkerPool Uncaught exception
+org.wso2.carbon.apimgt.common.jms.JmsRunTimeException: null
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager.handleException(JMSTaskManager.java:1144) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager.access$800(JMSTaskManager.java:62) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.createConnection(JMSTaskManager.java:969) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.getConnection(JMSTaskManager.java:829) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:610) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172) [axis2_1.6.1.wso2v63_3.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+2023-02-13T10:47:56,555 [-] [JMSThreads69a4d900-9f64-46fb-8001-6920e998b12a-2] ERROR NativeWorkerPool Uncaught exception
+org.wso2.carbon.apimgt.common.jms.JmsRunTimeException: null
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager.handleException(JMSTaskManager.java:1144) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager.access$800(JMSTaskManager.java:62) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.createConnection(JMSTaskManager.java:969) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.getConnection(JMSTaskManager.java:829) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:610) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172) [axis2_1.6.1.wso2v63_3.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+2023-02-13T10:47:56,557 [-] [JMSThreadsab1df5fd-b9f5-46f6-8192-89a7c9c3b890-2] ERROR NativeWorkerPool Uncaught exception
+org.wso2.carbon.apimgt.common.jms.JmsRunTimeException: null
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager.handleException(JMSTaskManager.java:1144) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager.access$800(JMSTaskManager.java:62) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.createConnection(JMSTaskManager.java:969) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.getConnection(JMSTaskManager.java:829) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:610) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172) [axis2_1.6.1.wso2v63_3.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+2023-02-13T10:47:56,554 [-] [JMSThreads615ec501-8c46-4d57-b537-2302f39b846f-2] ERROR NativeWorkerPool Uncaught exception
+org.wso2.carbon.apimgt.common.jms.JmsRunTimeException: null
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager.handleException(JMSTaskManager.java:1144) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager.access$800(JMSTaskManager.java:62) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.createConnection(JMSTaskManager.java:969) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.getConnection(JMSTaskManager.java:829) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:610) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533) ~[org.wso2.carbon.apimgt.common.jms_9.0.174.50.jar:?]
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172) [axis2_1.6.1.wso2v63_3.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]

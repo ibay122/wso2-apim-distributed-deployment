@@ -1,0 +1,27 @@
+{
+	"username": "",
+	"trial-subscription-id": "d3NvMmFtX180LjAuMF9fbGludXhfXzA4OjhmOmMzOjEzOjE2OjU0",
+	"update-level": "180",
+	"channel": "full",
+	"environment": "",
+	"backup-dir": "/home/iqbal/.wso2-updates",
+	"product": {
+		"pattern": "wso2am-4.0.0",
+		"name": "wso2am",
+		"version": "4.0.0",
+		"backup": "/home/iqbal/.wso2-updates/backup/wso2am-4.0.0-b5e5a644-4c32-4463-a8e0-c811239efa8c",
+		"backup-size": 621700538
+	},
+	"services": {
+		"wso2": {
+			"enabled": true,
+			"name": "WSO2 Update Repository",
+			"url": "https://gateway.api.cloud.wso2.com/t/updateslive",
+			"token-url": "https://gateway.api.cloud.wso2.com/token",
+			"app-key": "Njg4bTVXTzFDSGlLWGFTT216MDJKOUxMRDYwYTpSOGJnZERXb2pLY0dTdVUyQWhDdzN3OWY3OGNh",
+			"access-token": "",
+			"refresh-token": ""
+		}
+	},
+	"hotfixes": null
+}

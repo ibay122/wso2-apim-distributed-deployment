@@ -1,0 +1,742 @@
+TID: [2023-02-13 10:43:28,192]  INFO {org.wso2.config.mapper.ConfigParser} - Initializing configurations with deployment configurations {org.wso2.config.mapper.ConfigParser}
+TID: [-1234] [] [2023-02-13 10:43:33,221]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} - Starting WSO2 Carbon...
+TID: [-1234] [] [2023-02-13 10:43:33,224]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} - Operating System : Linux 5.15.0-60-generic, amd64
+TID: [-1234] [] [2023-02-13 10:43:33,224]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} - Java Home        : /usr/lib/jvm/java-11-openjdk-amd64
+TID: [-1234] [] [2023-02-13 10:43:33,224]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} - Java Version     : 11.0.17
+TID: [-1234] [] [2023-02-13 10:43:33,224]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} - Java VM          : OpenJDK 64-Bit Server VM 11.0.17+8-post-Ubuntu-1ubuntu222.04,Ubuntu
+TID: [-1234] [] [2023-02-13 10:43:33,224]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} - Carbon Home      : /media/iqbal/nvme_data/wso2am_exam/wso2am-gw
+TID: [-1234] [] [2023-02-13 10:43:33,224]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} - Java Temp Dir    : /media/iqbal/nvme_data/wso2am_exam/wso2am-gw/tmp
+TID: [-1234] [] [2023-02-13 10:43:33,225]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} - User             : iqbal, en-US, Asia/Jakarta
+TID: [-1234] [] [2023-02-13 10:43:33,353]  INFO {org.wso2.carbon.crypto.provider.internal.DefaultCryptoProviderComponent} - 'CryptoService.Secret' property has not been set. 'org.wso2.carbon.crypto.provider.SymmetricKeyInternalCryptoProvider' won't be registered as an internal crypto provider. Please set the secret if the provider needs to be registered.
+TID: [-1234] [] [2023-02-13 10:43:34,786] ERROR {org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent} - Error in intializing system data sources: Error in initializing system data sources: Error in initializing system data sources at '/media/iqbal/nvme_data/wso2am_exam/wso2am-gw/repository/conf/datasources/master-datasources.xml' - [com.ctc.wstx.exc.WstxLazyException] Unexpected character '=' (code 61); expected a semi-colon after the reference for entity 'allowPublicKeyRetrieval'
+ at [row,col {unknown-source}]: [39,104] org.wso2.carbon.ndatasource.common.DataSourceException: Error in initializing system data sources: Error in initializing system data sources at '/media/iqbal/nvme_data/wso2am_exam/wso2am-gw/repository/conf/datasources/master-datasources.xml' - [com.ctc.wstx.exc.WstxLazyException] Unexpected character '=' (code 61); expected a semi-colon after the reference for entity 'allowPublicKeyRetrieval'
+ at [row,col {unknown-source}]: [39,104]
+	at org.wso2.carbon.ndatasource.core.DataSourceManager.initSystemDataSources(DataSourceManager.java:169)
+	at org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.initSystemDataSources(DataSourceServiceComponent.java:206)
+	at org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.setSecretCallbackHandlerService(DataSourceServiceComponent.java:192)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.internal.ds.model.ComponentReference.bind(ComponentReference.java:376)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.bindReference(ServiceComponentProp.java:430)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.bind(ServiceComponentProp.java:218)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:343)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.getEligible(Resolver.java:343)
+	at org.eclipse.equinox.internal.ds.SCRManager.serviceChanged(SCRManager.java:222)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:113)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:985)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:866)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:804)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:228)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:525)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:544)
+	at org.wso2.carbon.securevault.internal.SecretManagerInitializerComponent.activate(SecretManagerInitializerComponent.java:49)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponent.activate(ServiceComponent.java:260)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.activate(ServiceComponentProp.java:146)
+	at org.eclipse.equinox.internal.ds.model.ServiceComponentProp.build(ServiceComponentProp.java:345)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:620)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponents(InstanceProcess.java:197)
+	at org.eclipse.equinox.internal.ds.Resolver.buildNewlySatisfied(Resolver.java:473)
+	at org.eclipse.equinox.internal.ds.Resolver.enableComponents(Resolver.java:217)
+	at org.eclipse.equinox.internal.ds.SCRManager.performWork(SCRManager.java:816)
+	at org.eclipse.equinox.internal.ds.SCRManager$QueuedJob.dispatch(SCRManager.java:783)
+	at org.eclipse.equinox.internal.ds.WorkThread.run(WorkThread.java:89)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.wso2.carbon.ndatasource.common.DataSourceException: Error in initializing system data sources at '/media/iqbal/nvme_data/wso2am_exam/wso2am-gw/repository/conf/datasources/master-datasources.xml' - [com.ctc.wstx.exc.WstxLazyException] Unexpected character '=' (code 61); expected a semi-colon after the reference for entity 'allowPublicKeyRetrieval'
+ at [row,col {unknown-source}]: [39,104]
+	at org.wso2.carbon.ndatasource.core.DataSourceManager.initSystemDataSource(DataSourceManager.java:190)
+	at org.wso2.carbon.ndatasource.core.DataSourceManager.initSystemDataSources(DataSourceManager.java:157)
+	... 40 more
+Caused by: [com.ctc.wstx.exc.WstxLazyException] com.ctc.wstx.exc.WstxUnexpectedCharException: Unexpected character '=' (code 61); expected a semi-colon after the reference for entity 'allowPublicKeyRetrieval'
+ at [row,col {unknown-source}]: [39,104]
+	at com.ctc.wstx.exc.WstxLazyException.throwLazily(WstxLazyException.java:45)
+	at com.ctc.wstx.sr.StreamScanner.throwLazyError(StreamScanner.java:720)
+	at com.ctc.wstx.sr.BasicStreamReader.safeFinishToken(BasicStreamReader.java:3677)
+	at com.ctc.wstx.sr.BasicStreamReader.getText(BasicStreamReader.java:858)
+	at org.apache.axiom.om.impl.builder.StAXBuilder.createOMText(StAXBuilder.java:289)
+	at org.apache.axiom.om.impl.builder.StAXBuilder.createOMText(StAXBuilder.java:250)
+	at org.apache.axiom.om.impl.builder.StAXOMBuilder.next(StAXOMBuilder.java:252)
+	at org.apache.axiom.om.impl.llom.OMElementImpl.getNextOMSibling(OMElementImpl.java:336)
+	at org.apache.axiom.om.impl.traverse.OMChildrenIterator.getNextNode(OMChildrenIterator.java:36)
+	at org.apache.axiom.om.impl.traverse.OMAbstractIterator.hasNext(OMAbstractIterator.java:58)
+	at org.apache.axiom.om.impl.traverse.OMFilterIterator.hasNext(OMFilterIterator.java:54)
+	at org.wso2.securevault.SecretResolverFactory.create(SecretResolverFactory.java:160)
+	at org.wso2.carbon.ndatasource.core.utils.DataSourceUtils.secureResolveOMElement(DataSourceUtils.java:317)
+	at org.wso2.carbon.ndatasource.core.DataSourceManager.initSystemDataSource(DataSourceManager.java:178)
+	... 41 more
+Caused by: com.ctc.wstx.exc.WstxUnexpectedCharException: Unexpected character '=' (code 61); expected a semi-colon after the reference for entity 'allowPublicKeyRetrieval'
+ at [row,col {unknown-source}]: [39,104]
+	at com.ctc.wstx.sr.StreamScanner.throwUnexpectedChar(StreamScanner.java:639)
+	at com.ctc.wstx.sr.StreamScanner.parseEntityName(StreamScanner.java:2059)
+	at com.ctc.wstx.sr.StreamScanner.fullyResolveEntity(StreamScanner.java:1517)
+	at com.ctc.wstx.sr.BasicStreamReader.readTextSecondary(BasicStreamReader.java:4701)
+	at com.ctc.wstx.sr.BasicStreamReader.readCoalescedText(BasicStreamReader.java:4147)
+	at com.ctc.wstx.sr.BasicStreamReader.finishToken(BasicStreamReader.java:3719)
+	at com.ctc.wstx.sr.BasicStreamReader.safeFinishToken(BasicStreamReader.java:3675)
+	... 52 more
+
+TID: [-1234] [] [2023-02-13 10:43:35,185] ERROR {org.wso2.carbon.user.core.internal.Activator} - Cannot start User Manager Core bundle java.lang.RuntimeException: Error in looking up data source: Name [jdbc/SHARED_DB] is not bound in this Context. Unable to find [jdbc].
+	at org.wso2.carbon.user.core.util.DatabaseUtil.lookupDataSource(DatabaseUtil.java:98)
+	at org.wso2.carbon.user.core.util.DatabaseUtil.createRealmDataSource(DatabaseUtil.java:341)
+	at org.wso2.carbon.user.core.util.DatabaseUtil.getRealmDataSource(DatabaseUtil.java:78)
+	at org.wso2.carbon.user.core.common.DefaultRealmService.<init>(DefaultRealmService.java:90)
+	at org.wso2.carbon.user.core.common.DefaultRealmService.<init>(DefaultRealmService.java:115)
+	at org.wso2.carbon.user.core.internal.Activator.startDeploy(Activator.java:72)
+	at org.wso2.carbon.user.core.internal.BundleCheckActivator.start(BundleCheckActivator.java:61)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:842)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:834)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:791)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1013)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:598)
+	at org.eclipse.osgi.container.Module.start(Module.java:462)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$1.run(ModuleContainer.java:1820)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$2$1.execute(EquinoxContainerAdaptor.java:150)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1813)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1770)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1735)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+Caused by: javax.naming.NameNotFoundException: Name [jdbc/SHARED_DB] is not bound in this Context. Unable to find [jdbc].
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:840)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:172)
+	at org.wso2.carbon.context.internal.CarbonContextDataHolder$CarbonInitialJNDIContext.lookup(CarbonContextDataHolder.java:709)
+	at java.naming/javax.naming.InitialContext.lookup(InitialContext.java:409)
+	at java.naming/javax.naming.InitialContext.doLookup(InitialContext.java:282)
+	at org.wso2.carbon.user.core.util.DatabaseUtil.lookupDataSource(DatabaseUtil.java:96)
+	... 24 more
+
+TID: [2023-02-13 10:44:19,246]  INFO {org.wso2.config.mapper.ConfigParser} - Configurations Changed in :repository/conf/deployment.toml {org.wso2.config.mapper.ConfigParser}
+TID: [2023-02-13 10:44:19,248]  INFO {org.wso2.config.mapper.ConfigParser} - Overriding files in configuration directory /media/iqbal/nvme_data/wso2am_exam/wso2am-gw {org.wso2.config.mapper.ConfigParser}
+TID: [-1234] [] [2023-02-13 10:44:24,443]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} - Starting WSO2 Carbon...
+TID: [-1234] [] [2023-02-13 10:44:24,446]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} - Operating System : Linux 5.15.0-60-generic, amd64
+TID: [-1234] [] [2023-02-13 10:44:24,446]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} - Java Home        : /usr/lib/jvm/java-11-openjdk-amd64
+TID: [-1234] [] [2023-02-13 10:44:24,446]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} - Java Version     : 11.0.17
+TID: [-1234] [] [2023-02-13 10:44:24,446]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} - Java VM          : OpenJDK 64-Bit Server VM 11.0.17+8-post-Ubuntu-1ubuntu222.04,Ubuntu
+TID: [-1234] [] [2023-02-13 10:44:24,447]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} - Carbon Home      : /media/iqbal/nvme_data/wso2am_exam/wso2am-gw
+TID: [-1234] [] [2023-02-13 10:44:24,447]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} - Java Temp Dir    : /media/iqbal/nvme_data/wso2am_exam/wso2am-gw/tmp
+TID: [-1234] [] [2023-02-13 10:44:24,447]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} - User             : iqbal, en-US, Asia/Jakarta
+TID: [-1234] [] [2023-02-13 10:44:24,586]  INFO {org.wso2.carbon.crypto.provider.internal.DefaultCryptoProviderComponent} - 'CryptoService.Secret' property has not been set. 'org.wso2.carbon.crypto.provider.SymmetricKeyInternalCryptoProvider' won't be registered as an internal crypto provider. Please set the secret if the provider needs to be registered.
+TID: [-1234] [] [2023-02-13 10:44:26,907]  INFO {org.wso2.carbon.consent.mgt.core.internal.ConsentManagerComponent} - ConsentManagerComponent is activated.
+TID: [-1234] [] [2023-02-13 10:44:27,213]  WARN {org.wso2.carbon.registry.core.config.RegistryConfigurationProcessor} - Could not find the handler class org.wso2.is.key.manager.core.handlers.TenantConfigMediaTypeHandler. This handler will not be registered. All handler and filter classes should be in the class path of the Registry.
+TID: [-1234] [] [2023-02-13 10:44:27,357]  INFO {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService} - Configured Registry in 92ms
+TID: [-1234] [] [2023-02-13 10:44:27,399]  INFO {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService} - Connected to mount at configregistry in 3ms
+TID: [-1234] [] [2023-02-13 10:44:27,400]  INFO {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService} - Connected to mount at govregistry in 3ms
+TID: [-1234] [] [2023-02-13 10:44:27,448]  INFO {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService} - Connected to mount at configregistry in 0ms
+TID: [-1234] [] [2023-02-13 10:44:27,449]  INFO {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService} - Connected to mount at govregistry in 1ms
+TID: [-1234] [] [2023-02-13 10:44:27,497]  INFO {org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent} - Registry Mode    : READ-WRITE
+TID: [-1234] [] [2023-02-13 10:44:27,695]  INFO {org.wso2.carbon.metrics.impl.util.JmxReporterBuilder} - Creating JMX reporter for Metrics with domain 'org.wso2.carbon.metrics'
+TID: [-1234] [] [2023-02-13 10:44:27,698]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} - Started JMX reporter for Metrics
+TID: [-1234] [] [2023-02-13 10:44:28,867]  INFO {org.wso2.carbon.registry.indexing.solr.SolrClient} - Default Embedded Solr Server Initialized
+TID: [-1234] [] [2023-02-13 10:44:28,941]  INFO {org.wso2.carbon.user.core.internal.UserStoreMgtDSComponent} - Carbon UserStoreMgtDSComponent activated successfully.
+TID: [-1234] [] [2023-02-13 10:44:29,573]  INFO {org.wso2.carbon.identity.user.store.configuration.deployer.UserStoreConfigurationDeployer} - User Store Configuration Deployer initiated.
+TID: [-1234] [] [2023-02-13 10:44:29,573]  INFO {org.wso2.carbon.identity.user.store.configuration.deployer.UserStoreConfigurationDeployer} - User Store Configuration Deployer initiated.
+TID: [-1234] [] [2023-02-13 10:44:30,009]  INFO {org.wso2.carbon.websocket.transport.WebsocketTransportSender} - WSS Sender started
+TID: [-1234] [] [2023-02-13 10:44:30,012]  INFO {org.apache.synapse.transport.passthru.PassThroughHttpSender} - Initializing Pass-through HTTP/S Sender...
+TID: [-1234] [] [2023-02-13 10:44:30,047]  INFO {org.apache.synapse.transport.passthru.PassThroughHttpSender} - Pass-through HTTP Sender started...
+TID: [-1234] [] [2023-02-13 10:44:30,048]  INFO {org.apache.synapse.transport.passthru.PassThroughHttpSSLSender} - Initializing Pass-through HTTP/S Sender...
+TID: [-1234] [] [2023-02-13 10:44:30,055]  INFO {org.apache.synapse.transport.nhttp.config.ClientConnFactoryBuilder} - customSSLProfiles configuration is loaded from path: /media/iqbal/nvme_data/wso2am_exam/wso2am-gw/repository/resources/security/sslprofiles.xml
+TID: [-1234] [] [2023-02-13 10:44:30,056]  INFO {org.apache.synapse.transport.nhttp.config.ClientConnFactoryBuilder} - HTTPS Loading custom SSL profiles for the HTTPS sender
+TID: [-1234] [] [2023-02-13 10:44:30,060]  INFO {org.apache.synapse.transport.nhttp.config.ClientConnFactoryBuilder} - HTTPS Custom SSL profiles initialized for 1 servers
+TID: [-1234] [] [2023-02-13 10:44:30,061]  INFO {org.apache.synapse.transport.passthru.PassThroughHttpSSLSender} - Pass-through HTTPS Sender started...
+TID: [-1234] [] [2023-02-13 10:44:30,063]  INFO {org.wso2.carbon.websocket.transport.WebsocketTransportSender} - WS Sender started
+TID: [-1234] [] [2023-02-13 10:44:30,074]  INFO {org.apache.synapse.transport.passthru.PassThroughHttpListener} - Initializing Pass-through HTTP/S Listener...
+TID: [-1234] [] [2023-02-13 10:44:30,086]  INFO {org.apache.synapse.transport.passthru.PassThroughHttpMultiSSLListener} - Initializing Pass-through HTTP/S Listener...
+TID: [-1234] [] [2023-02-13 10:44:30,092]  INFO {org.apache.synapse.transport.nhttp.config.ServerConnFactoryBuilder} - SSLProfile configuration is loaded from path: /media/iqbal/nvme_data/wso2am_exam/wso2am-gw/repository/resources/security/listenerprofiles.xml
+TID: [-1234] [] [2023-02-13 10:44:30,830]  INFO {org.wso2.carbon.core.deployment.DeploymentInterceptor} - Deploying Axis2 service: I18nEmailMgtConfigService {super-tenant}
+TID: [-1234] [] [2023-02-13 10:44:31,682]  INFO {org.wso2.carbon.core.deployment.DeploymentInterceptor} - Deploying Axis2 service: AccountCredentialMgtConfigService {super-tenant}
+TID: [-1234] [] [2023-02-13 10:44:31,683]  INFO {org.wso2.carbon.core.deployment.DeploymentInterceptor} - Deploying Axis2 service: UserIdentityManagementAdminService {super-tenant}
+TID: [-1234] [] [2023-02-13 10:44:31,685]  INFO {org.wso2.carbon.core.deployment.DeploymentInterceptor} - Deploying Axis2 service: UserInformationRecoveryService {super-tenant}
+TID: [-1234] [] [2023-02-13 10:44:33,252]  INFO {org.wso2.carbon.core.deployment.DeploymentInterceptor} - Deploying Axis2 service: wso2carbon-sts {super-tenant}
+TID: [-1234] [] [2023-02-13 10:44:33,474]  INFO {org.wso2.carbon.core.init.CarbonServerManager} - Repository       : /media/iqbal/nvme_data/wso2am_exam/wso2am-gw/repository/deployment/server/
+TID: [-1234] [] [2023-02-13 10:44:33,482]  INFO {org.wso2.carbon.andes.core.internal.ds.QueueManagerServiceDS} - Successfully created the queue manager service
+TID: [-1234] [] [2023-02-13 10:44:33,485]  INFO {org.wso2.carbon.andes.core.internal.ds.SubscriptionManagerServiceDS} - Successfully created the subscription manager service
+TID: [-1234] [] [2023-02-13 10:44:33,516]  INFO {org.wso2.carbon.apimgt.persistence.internal.PersistenceManagerComponent} - Activating PersistenceManagerComponent 
+TID: [-1234] [] [2023-02-13 10:44:33,555]  INFO {org.wso2.carbon.core.multitenancy.eager.TenantLoadingConfig} - Using tenant lazy loading policy...
+TID: [-1234] [] [2023-02-13 10:44:33,565]  INFO {org.wso2.carbon.core.internal.permission.update.PermissionUpdater} - Permission cache updated for tenant -1234
+TID: [-1234] [] [2023-02-13 10:44:33,876]  WARN {org.wso2.carbon.identity.application.mgt.internal.ApplicationManagementServiceComponent} - Templates directory not found at /media/iqbal/nvme_data/wso2am_exam/wso2am-gw/repository/resources/identity/authntemplates
+TID: [-1234] [] [2023-02-13 10:44:34,351]  INFO {org.wso2.carbon.user.core.internal.UserStoreMgtDSComponent} - Claim manager set for class org.wso2.carbon.user.core.common.DefaultRealm
+TID: [-1234] [] [2023-02-13 10:44:34,353]  INFO {org.wso2.carbon.user.core.internal.UserStoreMgtDSComponent} - Claim manager set for class org.wso2.carbon.user.core.jdbc.UniqueIDJDBCUserStoreManager
+TID: [-1234] [] [2023-02-13 10:44:34,447]  INFO {org.wso2.carbon.identity.entitlement.internal.SchemaBuilder} - XACML policy schema loaded successfully.
+TID: [-1234] [] [2023-02-13 10:44:35,267]  INFO {org.wso2.carbon.apimgt.common.jms.factory.JMSConnectionFactory} - JMS ConnectionFactory : Siddhi-JMS-Consumer initialized
+TID: [-1234] [] [2023-02-13 10:44:35,281]  INFO {org.wso2.carbon.apimgt.impl.internal.APIManagerComponent} - Wso2Event Publisher not enabled.
+TID: [-1234] [] [2023-02-13 10:44:35,373]  WARN {org.wso2.carbon.identity.event.internal.IdentityEventServiceComponent} - Properties for userPostSelfRegistration is not configured. This event handler will not be activated
+TID: [-1234] [] [2023-02-13 10:44:35,462]  INFO {org.wso2.carbon.identity.oauth.config.OAuthServerConfiguration} - The default OAuth token issuer will be used. No custom token generator is set.
+TID: [-1234] [] [2023-02-13 10:44:35,646]  INFO {org.wso2.carbon.identity.application.authentication.framework.store.SessionDataStore} - Thread pool size for temporary authentication context data delete task: 20
+TID: [-1234] [] [2023-02-13 10:44:36,469]  INFO {org.wso2.carbon.mediation.initializer.ServiceBusInitializer} - Starting ESB...
+TID: [-1234] [] [2023-02-13 10:44:36,486]  INFO {org.wso2.carbon.mediation.initializer.ServiceBusInitializer} - Initializing Apache Synapse...
+TID: [-1234] [] [2023-02-13 10:44:36,489]  INFO {org.apache.synapse.SynapseControllerFactory} - Using Synapse home : /media/iqbal/nvme_data/wso2am_exam/wso2am-gw/.
+TID: [-1234] [] [2023-02-13 10:44:36,490]  INFO {org.apache.synapse.SynapseControllerFactory} - Using synapse.xml location : /media/iqbal/nvme_data/wso2am_exam/wso2am-gw/././repository/deployment/server/synapse-configs/default
+TID: [-1234] [] [2023-02-13 10:44:36,490]  INFO {org.apache.synapse.SynapseControllerFactory} - Using server name : localhost
+TID: [-1234] [] [2023-02-13 10:44:36,501]  INFO {org.apache.synapse.SynapseControllerFactory} - The timeout handler will run every : 15s
+TID: [-1234] [] [2023-02-13 10:44:36,515]  INFO {org.apache.synapse.Axis2SynapseController} - Initializing Synapse at : Mon Feb 13 10:44:36 WIB 2023
+TID: [-1234] [] [2023-02-13 10:44:36,520]  INFO {org.wso2.carbon.mediation.initializer.CarbonSynapseController} - Loading the mediation configuration from the file system
+TID: [-1234] [] [2023-02-13 10:44:36,522]  INFO {org.apache.synapse.config.xml.MultiXMLConfigurationBuilder} - Building synapse configuration from the synapse artifact repository at : ././repository/deployment/server/synapse-configs/default
+TID: [-1234] [] [2023-02-13 10:44:36,523]  INFO {org.apache.synapse.config.xml.XMLConfigurationBuilder} - Generating the Synapse configuration model by parsing the XML configuration
+TID: [-1234] [] [2023-02-13 10:44:36,612]  INFO {org.wso2.carbon.mediation.dependency.mgt.DependencyTracker} - Sequence : dispatchSeq was added to the Synapse configuration successfully
+TID: [-1234] [] [2023-02-13 10:44:36,628]  INFO {org.wso2.carbon.mediation.dependency.mgt.DependencyTracker} - Sequence : fault was added to the Synapse configuration successfully
+TID: [-1234] [] [2023-02-13 10:44:36,645]  INFO {org.wso2.carbon.mediation.dependency.mgt.DependencyTracker} - Sequence : main was added to the Synapse configuration successfully
+TID: [-1234] [] [2023-02-13 10:44:36,646]  INFO {org.wso2.carbon.mediation.dependency.mgt.DependencyTracker} - Sequence : outDispatchSeq was added to the Synapse configuration successfully
+TID: [-1234] [] [2023-02-13 10:44:36,661]  INFO {org.wso2.carbon.mediation.dependency.mgt.DependencyTracker} - Sequence : webhooksFaultSequence was added to the Synapse configuration successfully
+TID: [-1234] [] [2023-02-13 10:44:36,667]  INFO {org.wso2.carbon.mediation.dependency.mgt.DependencyTracker} - Sequence : _auth_failure_handler_ was added to the Synapse configuration successfully
+TID: [-1234] [] [2023-02-13 10:44:36,673]  INFO {org.wso2.carbon.mediation.dependency.mgt.DependencyTracker} - Sequence : _backend_failure_handler_ was added to the Synapse configuration successfully
+TID: [-1234] [] [2023-02-13 10:44:36,678]  INFO {org.wso2.carbon.mediation.dependency.mgt.DependencyTracker} - Sequence : _api_blocked_sequence_ was added to the Synapse configuration successfully
+TID: [-1234] [] [2023-02-13 10:44:36,682]  INFO {org.wso2.carbon.mediation.dependency.mgt.DependencyTracker} - Sequence : _build_ was added to the Synapse configuration successfully
+TID: [-1234] [] [2023-02-13 10:44:36,685]  INFO {org.wso2.carbon.mediation.dependency.mgt.DependencyTracker} - Sequence : _cors_request_handler_ was added to the Synapse configuration successfully
+TID: [-1234] [] [2023-02-13 10:44:36,690]  INFO {org.wso2.carbon.mediation.dependency.mgt.DependencyTracker} - Sequence : _graphql_failure_handler was added to the Synapse configuration successfully
+TID: [-1234] [] [2023-02-13 10:44:36,691]  INFO {org.wso2.carbon.mediation.dependency.mgt.DependencyTracker} - Sequence : _production_key_error_ was added to the Synapse configuration successfully
+TID: [-1234] [] [2023-02-13 10:44:36,692]  INFO {org.wso2.carbon.mediation.dependency.mgt.DependencyTracker} - Sequence : _resource_mismatch_handler_ was added to the Synapse configuration successfully
+TID: [-1234] [] [2023-02-13 10:44:36,693]  INFO {org.wso2.carbon.mediation.dependency.mgt.DependencyTracker} - Sequence : _sandbox_key_error_ was added to the Synapse configuration successfully
+TID: [-1234] [] [2023-02-13 10:44:36,699]  INFO {org.wso2.carbon.mediation.dependency.mgt.DependencyTracker} - Sequence : _threat_fault_ was added to the Synapse configuration successfully
+TID: [-1234] [] [2023-02-13 10:44:36,710]  INFO {org.wso2.carbon.mediation.dependency.mgt.DependencyTracker} - Sequence : _throttle_out_handler_ was added to the Synapse configuration successfully
+TID: [-1234] [] [2023-02-13 10:44:36,716]  INFO {org.wso2.carbon.mediation.dependency.mgt.DependencyTracker} - Sequence : _token_fault_ was added to the Synapse configuration successfully
+TID: [-1234] [] [2023-02-13 10:44:36,727]  INFO {org.wso2.carbon.mediation.dependency.mgt.DependencyTracker} - Proxy service : WorkflowCallbackService was added to the Synapse configuration successfully
+TID: [-1234] [] [2023-02-13 10:44:36,762]  INFO {org.wso2.carbon.mediation.dependency.mgt.DependencyTracker} - API : _OpenService_ was added to the Synapse configuration successfully
+TID: [-1234] [] [2023-02-13 10:44:36,769]  INFO {org.wso2.carbon.mediation.dependency.mgt.DependencyTracker} - Inbound Endpoint : SecureWebhookServer was added to the Synapse configuration successfully
+TID: [-1234] [] [2023-02-13 10:44:36,770]  INFO {org.wso2.carbon.mediation.dependency.mgt.DependencyTracker} - Inbound Endpoint : SecureWebSocketEP was added to the Synapse configuration successfully
+TID: [-1234] [] [2023-02-13 10:44:36,771]  INFO {org.wso2.carbon.mediation.dependency.mgt.DependencyTracker} - Inbound Endpoint : WebhookServer was added to the Synapse configuration successfully
+TID: [-1234] [] [2023-02-13 10:44:36,773]  INFO {org.wso2.carbon.mediation.dependency.mgt.DependencyTracker} - Inbound Endpoint : WebSocketInboundEndpoint was added to the Synapse configuration successfully
+TID: [-1234] [] [2023-02-13 10:44:36,773]  INFO {org.apache.synapse.config.SynapseConfigurationBuilder} - Loaded Synapse configuration from the artifact repository at : ././repository/deployment/server/synapse-configs/default
+TID: [-1234] [] [2023-02-13 10:44:36,774]  INFO {org.wso2.carbon.mediation.dependency.mgt.DependencyTracker} - Local entry : SERVER_HOST was added to the Synapse configuration successfully
+TID: [-1234] [] [2023-02-13 10:44:36,774]  INFO {org.wso2.carbon.mediation.dependency.mgt.DependencyTracker} - Local entry : SERVER_IP was added to the Synapse configuration successfully
+TID: [-1234] [] [2023-02-13 10:44:36,800]  INFO {org.apache.synapse.Axis2SynapseController} - Loading mediator extensions...
+TID: [-1234] [] [2023-02-13 10:44:36,819]  INFO {org.wso2.carbon.core.deployment.DeploymentInterceptor} - Deploying Axis2 service: echo {super-tenant}
+TID: [-1234] [] [2023-02-13 10:44:36,838]  INFO {org.wso2.carbon.core.deployment.DeploymentInterceptor} - Deploying Axis2 service: Version {super-tenant}
+TID: [-1234] [] [2023-02-13 10:44:40,210]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} - Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/am/sample/pizzashack/v1].File[/media/iqbal/nvme_data/wso2am_exam/wso2am-gw/repository/deployment/server/webapps/am#sample#pizzashack#v1.war]
+TID: [-1234] [] [2023-02-13 10:44:45,461]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} - Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/api/am/gateway/v2].File[/media/iqbal/nvme_data/wso2am_exam/wso2am-gw/repository/deployment/server/webapps/api#am#gateway#v2.war]
+TID: [-1234] [] [2023-02-13 10:44:45,463]  INFO {org.apache.synapse.Axis2SynapseController} - Deploying the Synapse service...
+TID: [-1234] [] [2023-02-13 10:44:45,464]  INFO {org.apache.synapse.Axis2SynapseController} - Deploying Proxy services...
+TID: [-1234] [] [2023-02-13 10:44:45,476]  INFO {org.apache.synapse.core.axis2.ProxyService} - {proxy:WorkflowCallbackService} Building Axis service for Proxy service : WorkflowCallbackService
+TID: [-1234] [] [2023-02-13 10:44:45,480]  INFO {org.apache.synapse.core.axis2.ProxyService} - {proxy:WorkflowCallbackService} Adding service WorkflowCallbackService to the Axis2 configuration
+TID: [-1234] [] [2023-02-13 10:44:45,482]  INFO {org.wso2.carbon.core.deployment.DeploymentInterceptor} - Deploying Axis2 service: WorkflowCallbackService {super-tenant}
+TID: [-1234] [] [2023-02-13 10:44:45,482]  INFO {org.apache.synapse.core.axis2.ProxyService} - {proxy:WorkflowCallbackService} Successfully created the Axis2 service for Proxy service : WorkflowCallbackService
+TID: [-1234] [] [2023-02-13 10:44:45,482]  INFO {org.apache.synapse.Axis2SynapseController} - Deployed Proxy service : WorkflowCallbackService
+TID: [-1234] [] [2023-02-13 10:44:45,482]  INFO {org.apache.synapse.Axis2SynapseController} - Deploying EventSources...
+TID: [-1234] [] [2023-02-13 10:44:45,502]  INFO {org.apache.synapse.inbound.InboundEndpoint} - Initializing Inbound Endpoint: WebSocketInboundEndpoint
+TID: [-1234] [] [2023-02-13 10:44:45,698]  INFO {org.wso2.carbon.inbound.endpoint.protocol.websocket.management.WebsocketEndpointManager} - Netty Listener starting on port 9100
+TID: [-1234] [] [2023-02-13 10:44:45,699]  INFO {org.apache.synapse.inbound.InboundEndpoint} - Initializing Inbound Endpoint: SecureWebSocketEP
+TID: [-1234] [] [2023-02-13 10:44:45,725]  INFO {org.wso2.carbon.inbound.endpoint.protocol.websocket.management.WebsocketEndpointManager} - Netty SSL Listener starting on port 8100
+TID: [-1234] [] [2023-02-13 10:44:45,726]  INFO {org.apache.synapse.inbound.InboundEndpoint} - Initializing Inbound Endpoint: WebhookServer
+TID: [-1234] [] [2023-02-13 10:44:45,756]  INFO {org.apache.synapse.transport.passthru.core.PassThroughListeningIOReactorManager} - Pass-through WebhookServer Listener started on store.binance.com:9022
+TID: [-1234] [] [2023-02-13 10:44:45,757]  INFO {org.apache.synapse.inbound.InboundEndpoint} - Initializing Inbound Endpoint: SecureWebhookServer
+TID: [-1234] [] [2023-02-13 10:44:45,774]  INFO {org.apache.synapse.transport.passthru.core.PassThroughListeningIOReactorManager} - Pass-through SecureWebhookServer Listener started on store.binance.com:8022
+TID: [-1234] [] [2023-02-13 10:44:45,775]  INFO {org.apache.synapse.api.API} - {api:_OpenService_} Initializing API: _OpenService_
+TID: [-1234] [] [2023-02-13 10:44:45,775]  INFO {org.apache.synapse.ServerManager} - Server ready for processing...
+TID: [-1234] [] [2023-02-13 10:44:46,124]  INFO {org.wso2.carbon.apimgt.common.jms.factory.JMSConnectionFactory} - JMS ConnectionFactory : Siddhi-JMS-Consumer initialized
+TID: [-1234] [] [2023-02-13 10:44:46,125]  INFO {org.wso2.carbon.apimgt.common.jms.factory.JMSConnectionFactory} - JMS ConnectionFactory : Siddhi-JMS-Consumer initialized
+TID: [-1234] [] [2023-02-13 10:44:46,153]  INFO {org.wso2.carbon.inbound.endpoint.protocol.websocket.management.WebsocketEndpointManager} - Netty Listener already started on port 8100
+TID: [-1234] [] [2023-02-13 10:44:46,154]  INFO {org.wso2.carbon.inbound.endpoint.protocol.http.management.HTTPEndpointManager} - Listener is already started for port : 8022
+TID: [-1234] [] [2023-02-13 10:44:46,154]  INFO {org.wso2.carbon.inbound.endpoint.protocol.websocket.management.WebsocketEndpointManager} - Netty Listener already started on port 9100
+TID: [-1234] [] [2023-02-13 10:44:46,155]  INFO {org.wso2.carbon.inbound.endpoint.protocol.http.management.HTTPEndpointManager} - Listener is already started for port : 9022
+TID: [-1234] [] [2023-02-13 10:44:46,256]  INFO {org.wso2.carbon.andes.internal.QpidServiceComponent} - Activating Andes Message Broker Engine...
+TID: [-1234] [] [2023-02-13 10:44:46,557]  INFO {qpid.message.broker.listening} - [Broker] BRK-1002 : Starting : Listening on TCP port 5673
+TID: [-1234] [] [2023-02-13 10:44:46,560]  INFO {qpid.message.broker.listening} - [Broker] BRK-1002 : Starting : Listening on TCP/SSL port 8673
+TID: [-1234] [] [2023-02-13 10:44:46,593]  INFO {org.wso2.carbon.andes.internal.QpidServiceComponent} - AMQP Host Address : 0.0.0.0 Port : 5673
+TID: [-1234] [] [2023-02-13 10:44:46,594]  INFO {org.wso2.carbon.andes.internal.QpidServiceComponent} - Successfully connected to AMQP server on port 5673
+TID: [-1234] [] [2023-02-13 10:44:46,594]  INFO {org.wso2.carbon.andes.internal.QpidServiceComponent} - WSO2 Message Broker is started.
+TID: [-1234] [] [2023-02-13 10:44:46,860]  INFO {org.apache.synapse.transport.passthru.PassThroughHttpListener} - Starting Pass-through HTTP Listener...
+TID: [-1234] [] [2023-02-13 10:44:46,863]  INFO {org.apache.synapse.transport.passthru.core.PassThroughListeningIOReactorManager} - Pass-through HTTP Listener started on store.binance.com:8281
+TID: [-1234] [] [2023-02-13 10:44:46,863]  INFO {org.apache.synapse.transport.passthru.PassThroughHttpMultiSSLListener} - Starting Pass-through HTTPS Listener...
+TID: [-1234] [] [2023-02-13 10:44:46,867]  INFO {org.apache.synapse.transport.passthru.core.PassThroughListeningIOReactorManager} - Pass-through HTTPS Listener started on store.binance.com:8244
+TID: [-1234] [] [2023-02-13 10:44:46,918]  WARN {org.apache.tomcat.util.net.SSLUtilBase} - The trusted certificate with alias [thawtepremiumserverca] and DN [EMAILADDRESS=premium-server@thawte.com, CN=Thawte Premium Server CA, OU=Certification Services Division, O=Thawte Consulting cc, L=Cape Town, ST=Western Cape, C=ZA] is not valid due to [NotAfter: Sat Jan 02 06:59:59 WIB 2021]. Certificates signed by this trusted certificate WILL be accepted
+TID: [-1234] [] [2023-02-13 10:44:46,920]  WARN {org.apache.tomcat.util.net.SSLUtilBase} - The trusted certificate with alias [identrustdstx3] and DN [CN=DST Root CA X3, O=Digital Signature Trust Co.] is not valid due to [NotAfter: Thu Sep 30 21:01:15 WIB 2021]. Certificates signed by this trusted certificate WILL be accepted
+TID: [-1234] [] [2023-02-13 10:44:46,920]  WARN {org.apache.tomcat.util.net.SSLUtilBase} - The trusted certificate with alias [addtrustclass1ca] and DN [CN=AddTrust Class 1 CA Root, OU=AddTrust TTP Network, O=AddTrust AB, C=SE] is not valid due to [NotAfter: Sat May 30 17:38:31 WIB 2020]. Certificates signed by this trusted certificate WILL be accepted
+TID: [-1234] [] [2023-02-13 10:44:46,921]  WARN {org.apache.tomcat.util.net.SSLUtilBase} - The trusted certificate with alias [wso2carbon] and DN [CN=localhost, OU=WSO2, O=WSO2, L=Mountain View, ST=CA, C=US] is not valid due to [NotAfter: Tue Jan 25 14:30:43 WIB 2022]. Certificates signed by this trusted certificate WILL be accepted
+TID: [-1234] [] [2023-02-13 10:44:46,921]  WARN {org.apache.tomcat.util.net.SSLUtilBase} - The trusted certificate with alias [mzyxmmfkogywmwi0zwnmndcxngywymm4zta3mwi2ndazzgqzngm0zgrlnjjkodfkzdriotfkmwfhmzu2zgvlng_rs256] and DN [CN=localhost, OU=WSO2, O=WSO2, L=Mountain View, ST=CA, C=US] is not valid due to [NotAfter: Tue Jan 25 14:30:43 WIB 2022]. Certificates signed by this trusted certificate WILL be accepted
+TID: [-1234] [] [2023-02-13 10:44:46,921]  WARN {org.apache.tomcat.util.net.SSLUtilBase} - The trusted certificate with alias [gateway_certificate_alias] and DN [CN=localhost, OU=WSO2, O=WSO2, L=Mountain View, ST=CA, C=US] is not valid due to [NotAfter: Tue Jan 25 14:30:43 WIB 2022]. Certificates signed by this trusted certificate WILL be accepted
+TID: [-1234] [] [2023-02-13 10:44:46,922]  WARN {org.apache.tomcat.util.net.SSLUtilBase} - The trusted certificate with alias [globalsignr2ca] and DN [CN=GlobalSign, O=GlobalSign, OU=GlobalSign Root CA - R2] is not valid due to [NotAfter: Wed Dec 15 15:00:00 WIB 2021]. Certificates signed by this trusted certificate WILL be accepted
+TID: [-1234] [] [2023-02-13 10:44:46,922]  WARN {org.apache.tomcat.util.net.SSLUtilBase} - The trusted certificate with alias [geotrustglobalca] and DN [CN=GeoTrust Global CA, O=GeoTrust Inc., C=US] is not valid due to [NotAfter: Sat May 21 11:00:00 WIB 2022]. Certificates signed by this trusted certificate WILL be accepted
+TID: [-1234] [] [2023-02-13 10:44:46,922]  WARN {org.apache.tomcat.util.net.SSLUtilBase} - The trusted certificate with alias [soneraclass2ca] and DN [CN=Sonera Class2 CA, O=Sonera, C=FI] is not valid due to [NotAfter: Tue Apr 06 14:29:40 WIB 2021]. Certificates signed by this trusted certificate WILL be accepted
+TID: [-1234] [] [2023-02-13 10:44:46,923]  WARN {org.apache.tomcat.util.net.SSLUtilBase} - The trusted certificate with alias [verisigntsaca] and DN [CN=Thawte Timestamping CA, OU=Thawte Certification, O=Thawte, L=Durbanville, ST=Western Cape, C=ZA] is not valid due to [NotAfter: Sat Jan 02 06:59:59 WIB 2021]. Certificates signed by this trusted certificate WILL be accepted
+TID: [-1234] [] [2023-02-13 10:44:46,923]  WARN {org.apache.tomcat.util.net.SSLUtilBase} - The trusted certificate with alias [quovadisrootca] and DN [CN=QuoVadis Root Certification Authority, OU=Root Certification Authority, O=QuoVadis Limited, C=BM] is not valid due to [NotAfter: Thu Mar 18 01:33:33 WIB 2021]. Certificates signed by this trusted certificate WILL be accepted
+TID: [-1234] [] [2023-02-13 10:44:46,923]  WARN {org.apache.tomcat.util.net.SSLUtilBase} - The trusted certificate with alias [addtrustqualifiedca] and DN [CN=AddTrust Qualified CA Root, OU=AddTrust TTP Network, O=AddTrust AB, C=SE] is not valid due to [NotAfter: Sat May 30 17:44:50 WIB 2020]. Certificates signed by this trusted certificate WILL be accepted
+TID: [-1234] [] [2023-02-13 10:44:46,924]  WARN {org.apache.tomcat.util.net.SSLUtilBase} - The trusted certificate with alias [keynectisrootca] and DN [CN=KEYNECTIS ROOT CA, OU=ROOT, O=KEYNECTIS, C=FR] is not valid due to [NotAfter: Tue May 26 07:00:00 WIB 2020]. Certificates signed by this trusted certificate WILL be accepted
+TID: [-1234] [] [2023-02-13 10:44:46,924]  WARN {org.apache.tomcat.util.net.SSLUtilBase} - The trusted certificate with alias [addtrustexternalca] and DN [CN=AddTrust External CA Root, OU=AddTrust External TTP Network, O=AddTrust AB, C=SE] is not valid due to [NotAfter: Sat May 30 17:48:38 WIB 2020]. Certificates signed by this trusted certificate WILL be accepted
+TID: [-1234] [] [2023-02-13 10:44:46,924]  WARN {org.apache.tomcat.util.net.SSLUtilBase} - The trusted certificate with alias [luxtrustglobalrootca] and DN [CN=LuxTrust Global Root, O=LuxTrust s.a., C=LU] is not valid due to [NotAfter: Wed Mar 17 16:51:37 WIB 2021]. Certificates signed by this trusted certificate WILL be accepted
+TID: [-1234] [] [2023-02-13 10:44:46,999]  INFO {org.wso2.carbon.ntask.core.service.impl.TaskServiceImpl} - Task service starting in STANDALONE mode...
+TID: [-1234] [] [2023-02-13 10:44:47,025]  INFO {org.wso2.carbon.registry.eventing.internal.RegistryEventingServiceComponent} - Successfully Initialized Eventing on Registry
+TID: [-1234] [] [2023-02-13 10:44:47,104]  INFO {org.wso2.carbon.core.init.JMXServerManager} - JMX Service URL  : service:jmx:rmi://localhost:11112/jndi/rmi://localhost:10000/jmxrmi
+TID: [-1234] [] [2023-02-13 10:44:47,130]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTransportHandler} - Starting jms topic consumer thread for the keyManager topic...
+TID: [-1234] [] [2023-02-13 10:44:47,183]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTransportHandler} - Starting jms topic consumer thread for the throttleData topic...
+TID: [-1234] [] [2023-02-13 10:44:47,185]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTransportHandler} - Starting jms topic consumer thread for the tokenRevocation topic...
+TID: [-1234] [] [2023-02-13 10:44:47,200]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTransportHandler} - Starting jms topic consumer thread for the cacheInvalidation topic...
+TID: [-1234] [] [2023-02-13 10:44:47,210]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTransportHandler} - Starting jms topic consumer thread for the notification topic...
+TID: [-1234] [] [2023-02-13 10:44:47,211]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTransportHandler} - Starting jms topic consumer thread for the throttleData topic...
+TID: [-1234] [] [2023-02-13 10:44:47,211]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTransportHandler} - Starting jms topic consumer thread for the asyncWebhooksData topic...
+TID: [-1234] [] [2023-02-13 10:44:47,371]  INFO {org.wso2.carbon.core.internal.StartupFinalizerServiceComponent} - Server           :  WSO2 API Manager-4.0.0
+TID: [-1234] [] [2023-02-13 10:44:47,372]  INFO {org.wso2.carbon.core.internal.StartupFinalizerServiceComponent} - WSO2 Carbon started in 28 sec
+TID: [-1234] [] [2023-02-13 10:44:47,448]  INFO {org.wso2.carbon.apimgt.common.jms.JMSListener} - Connection attempt: 1 for JMS Provider for listener: Siddhi-JMS-Consumer#tokenRevocation was successful!
+TID: [-1234] [] [2023-02-13 10:44:47,450]  INFO {org.wso2.carbon.apimgt.common.jms.JMSListener} - Connection attempt: 1 for JMS Provider for listener: Siddhi-JMS-Consumer#cacheInvalidation was successful!
+TID: [-1234] [] [2023-02-13 10:44:47,452]  INFO {org.wso2.carbon.apimgt.common.jms.JMSListener} - Connection attempt: 1 for JMS Provider for listener: Siddhi-JMS-Consumer#throttleData was successful!
+TID: [-1234] [] [2023-02-13 10:44:47,454]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Task manager for Siddhi-JMS-Consumer [re-]initialized
+TID: [-1234] [] [2023-02-13 10:44:47,454]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Task manager for Siddhi-JMS-Consumer [re-]initialized
+TID: [-1234] [] [2023-02-13 10:44:47,454]  INFO {org.wso2.carbon.apimgt.common.jms.JMSListener} - Connection attempt: 1 for JMS Provider for listener: Siddhi-JMS-Consumer#notification was successful!
+TID: [-1234] [] [2023-02-13 10:44:47,455]  INFO {org.wso2.carbon.apimgt.common.jms.JMSListener} - Connection attempt: 1 for JMS Provider for listener: Siddhi-JMS-Consumer#keyManager was successful!
+TID: [-1234] [] [2023-02-13 10:44:47,454]  INFO {org.wso2.carbon.apimgt.common.jms.JMSListener} - Connection attempt: 1 for JMS Provider for listener: Siddhi-JMS-Consumer#asyncWebhooksData was successful!
+TID: [-1234] [] [2023-02-13 10:44:47,455]  INFO {org.wso2.carbon.apimgt.common.jms.JMSListener} - Connection attempt: 1 for JMS Provider for listener: Siddhi-JMS-Consumer#throttleData was successful!
+TID: [-1234] [] [2023-02-13 10:44:47,461]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Task manager for Siddhi-JMS-Consumer [re-]initialized
+TID: [-1234] [] [2023-02-13 10:44:47,462]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Task manager for Siddhi-JMS-Consumer [re-]initialized
+TID: [-1234] [] [2023-02-13 10:44:47,463]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Task manager for Siddhi-JMS-Consumer [re-]initialized
+TID: [-1234] [] [2023-02-13 10:44:47,465]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Task manager for Siddhi-JMS-Consumer [re-]initialized
+TID: [-1234] [] [2023-02-13 10:44:47,466]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Task manager for Siddhi-JMS-Consumer [re-]initialized
+TID: [-1234] [] [2023-02-13 10:44:47,619]  INFO {org.wso2.carbon.apimgt.impl.gatewayartifactsynchronizer.DBRetriever} - No artifacts available to deploy
+TID: [-1234] [] [2023-02-13 10:44:47,622]  INFO {org.wso2.carbon.apimgt.gateway.listeners.GatewayStartupListener} - Synapse Artifacts deployed Successfully in the Gateway
+TID: [-1234] [] [2023-02-13 10:44:47,660]  INFO {org.wso2.carbon.mediation.dependency.mgt.DependencyTracker} - Local entry : ga-config-key was added to the Synapse configuration successfully
+TID: [-1234] [] [2023-02-13 10:44:47,971]  INFO {org.wso2.carbon.ui.internal.CarbonUIServiceComponent} - Mgt Console URL  : https://localhost:9444/carbon/
+TID: [-1234] [] [2023-02-13 10:44:47,972]  INFO {org.wso2.carbon.ui.internal.CarbonUIServiceComponent} - API Developer Portal Default Context : https://localhost:9444/devportal
+TID: [-1234] [] [2023-02-13 10:44:47,972]  INFO {org.wso2.carbon.ui.internal.CarbonUIServiceComponent} - API Publisher Default Context : https://localhost:9444/publisher
+TID: [-1234] [] [2023-02-13 10:44:48,454]  INFO {org.wso2.carbon.apimgt.common.jms.JMSListener} - Started to listen on destination : tokenRevocation of type topic for listener Siddhi-JMS-Consumer#tokenRevocation
+TID: [-1234] [] [2023-02-13 10:44:48,454]  INFO {org.wso2.carbon.apimgt.common.jms.JMSListener} - Started to listen on destination : throttleData of type topic for listener Siddhi-JMS-Consumer#throttleData
+TID: [-1234] [] [2023-02-13 10:44:48,462]  INFO {org.wso2.carbon.apimgt.common.jms.JMSListener} - Started to listen on destination : cacheInvalidation of type topic for listener Siddhi-JMS-Consumer#cacheInvalidation
+TID: [-1234] [] [2023-02-13 10:44:48,463]  INFO {org.wso2.carbon.apimgt.common.jms.JMSListener} - Started to listen on destination : throttleData of type topic for listener Siddhi-JMS-Consumer#throttleData
+TID: [-1234] [] [2023-02-13 10:44:48,464]  INFO {org.wso2.carbon.apimgt.common.jms.JMSListener} - Started to listen on destination : asyncWebhooksData of type topic for listener Siddhi-JMS-Consumer#asyncWebhooksData
+TID: [-1234] [] [2023-02-13 10:44:48,466]  INFO {org.wso2.carbon.apimgt.common.jms.JMSListener} - Started to listen on destination : keyManager of type topic for listener Siddhi-JMS-Consumer#keyManager
+TID: [-1234] [] [2023-02-13 10:44:48,467]  INFO {org.wso2.carbon.apimgt.common.jms.JMSListener} - Started to listen on destination : notification of type topic for listener Siddhi-JMS-Consumer#notification
+TID: [-1234] [] [2023-02-13 10:44:48,670]  INFO {org.wso2.callhome.CallHomeExecutor} - 
+.....................................................................
+wso2am-4.0.0.180 is the latest update level available for the product
+wso2am-4.0.0
+.....................................................................
+TID: [-1234] [] [2023-02-13 10:47:54,241]  INFO {org.wso2.carbon.core.init.CarbonServerManager} - Shutdown hook triggered....
+TID: [-1234] [] [2023-02-13 10:47:54,244]  INFO {org.wso2.carbon.core.init.CarbonServerManager} - Gracefully shutting down WSO2 API Manager...
+TID: [-1234] [] [2023-02-13 10:47:54,247]  INFO {org.wso2.carbon.core.ServerManagement} - Starting to switch to maintenance mode...
+TID: [-1234] [] [2023-02-13 10:47:54,248]  INFO {org.apache.synapse.transport.passthru.PassThroughHttpListener} - Stopping Pass-through HTTP Listener..
+TID: [-1234] [] [2023-02-13 10:47:54,248]  INFO {org.apache.synapse.transport.passthru.core.PassThroughListeningIOReactorManager} - Pausing  IO Reactor bind for port 8281
+TID: [-1234] [] [2023-02-13 10:47:54,250]  INFO {org.apache.synapse.transport.passthru.core.PassThroughListeningIOReactorManager} - Shutting down IO Reactor bind for port 8281
+TID: [-1234] [] [2023-02-13 10:47:54,251]  INFO {org.apache.synapse.transport.passthru.core.PassThroughListeningIOReactorManager} - HTTP-Listener I/O dispatcher Listener shutdown.
+TID: [-1234] [] [2023-02-13 10:47:54,253]  INFO {org.apache.synapse.transport.passthru.PassThroughHttpMultiSSLListener} - Stopping Pass-through HTTPS Listener..
+TID: [-1234] [] [2023-02-13 10:47:54,254]  INFO {org.apache.synapse.transport.passthru.core.PassThroughListeningIOReactorManager} - Pausing  IO Reactor bind for port 8244
+TID: [-1234] [] [2023-02-13 10:47:54,256]  INFO {org.apache.synapse.transport.passthru.core.PassThroughListeningIOReactorManager} - Shutting down IO Reactor bind for port 8244
+TID: [-1234] [] [2023-02-13 10:47:54,257]  INFO {org.apache.synapse.transport.passthru.core.PassThroughListeningIOReactorManager} - HTTPS-Listener I/O dispatcher Listener shutdown.
+TID: [-1234] [] [2023-02-13 10:47:54,258]  INFO {org.wso2.carbon.core.ServerManagement} - Stopped all transport listeners
+TID: [-1234] [] [2023-02-13 10:47:54,258]  INFO {org.wso2.carbon.core.ServerManagement} - Waiting for request service completion...
+TID: [-1234] [] [2023-02-13 10:47:54,260]  INFO {org.wso2.carbon.core.ServerManagement} - All requests have been served.
+TID: [-1234] [] [2023-02-13 10:47:54,261]  INFO {org.wso2.carbon.core.ServerManagement} - Waiting for deployment completion...
+TID: [-1234] [] [2023-02-13 10:47:54,316]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} - Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/am/sample/pizzashack/v1]
+TID: [-1234] [] [2023-02-13 10:47:54,341]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} - Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/api/am/gateway/v2]
+TID: [-1234] [] [2023-02-13 10:47:54,341]  INFO {org.wso2.carbon.core.ServerManagement} - All deployment tasks have been completed.
+TID: [-1234] [] [2023-02-13 10:47:54,341]  INFO {org.wso2.carbon.core.ServerManagement} - Waiting for server task completion...
+TID: [-1234] [] [2023-02-13 10:47:54,342]  INFO {org.wso2.carbon.core.ServerManagement} - All server tasks have been completed.
+TID: [-1234] [] [2023-02-13 10:47:54,342]  INFO {org.wso2.carbon.core.init.CarbonServerManager} - Shutting down WSO2 API Manager...
+TID: [-1234] [] [2023-02-13 10:47:54,342]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTransportHandler} - Starting to Shutdown the Listener...
+TID: [-1234] [] [2023-02-13 10:47:55,287] ERROR {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - JMS Connection failed : Exception thrown against AMQConnection:
+Host: localhost
+Port: 5672
+Virtual Host: carbon
+Client ID: clientid
+Active session count: 1 - shutting down worker tasks
+TID: [-1234] [] [2023-02-13 10:47:55,287]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Reconnection attempt : 1 for Siddhi-JMS-Consumer
+TID: [-1234] [] [2023-02-13 10:47:55,287] ERROR {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - JMS Connection failed : Exception thrown against AMQConnection:
+Host: localhost
+Port: 5672
+Virtual Host: carbon
+Client ID: clientid
+Active session count: 1 - shutting down worker tasks
+TID: [-1234] [] [2023-02-13 10:47:55,288]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Reconnection attempt : 1 for Siddhi-JMS-Consumer
+TID: [-1234] [] [2023-02-13 10:47:55,288] ERROR {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - JMS Connection failed : Exception thrown against AMQConnection:
+Host: localhost
+Port: 5672
+Virtual Host: carbon
+Client ID: clientid
+Active session count: 1 - shutting down worker tasks
+TID: [-1234] [] [2023-02-13 10:47:55,289]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Reconnection attempt : 1 for Siddhi-JMS-Consumer
+TID: [-1234] [] [2023-02-13 10:47:55,290] ERROR {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - JMS Connection failed : Exception thrown against AMQConnection:
+Host: localhost
+Port: 5672
+Virtual Host: carbon
+Client ID: clientid
+Active session count: 1 - shutting down worker tasks
+TID: [-1234] [] [2023-02-13 10:47:55,290]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Reconnection attempt : 1 for Siddhi-JMS-Consumer
+TID: [-1234] [] [2023-02-13 10:47:55,293] ERROR {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - JMS Connection failed : Exception thrown against AMQConnection:
+Host: localhost
+Port: 5672
+Virtual Host: carbon
+Client ID: clientid
+Active session count: 1 - shutting down worker tasks
+TID: [-1234] [] [2023-02-13 10:47:55,293] ERROR {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - JMS Connection failed : Exception thrown against AMQConnection:
+Host: localhost
+Port: 5672
+Virtual Host: carbon
+Client ID: clientid
+Active session count: 1 - shutting down worker tasks
+TID: [-1234] [] [2023-02-13 10:47:55,293]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Reconnection attempt : 1 for Siddhi-JMS-Consumer
+TID: [-1234] [] [2023-02-13 10:47:55,293]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Reconnection attempt : 1 for Siddhi-JMS-Consumer
+TID: [-1234] [] [2023-02-13 10:47:55,287] ERROR {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Error receiving message for Siddhi-JMS-Consumer javax.jms.JMSException: Message consumer forcibly closed due to error: org.wso2.andes.AMQDisconnectedException: Server closed connection and no failover was successful
+	at org.wso2.andes.client.BasicMessageConsumer.returnMessageOrThrow(BasicMessageConsumer.java:594)
+	at org.wso2.andes.client.BasicMessageConsumer.receive(BasicMessageConsumer.java:473)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:627)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.wso2.andes.AMQDisconnectedException: Server closed connection and no failover was successful
+	at org.wso2.andes.client.failover.FailoverHandler.run(FailoverHandler.java:192)
+	... 1 more
+
+TID: [-1234] [] [2023-02-13 10:47:55,292] ERROR {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Error receiving message for Siddhi-JMS-Consumer javax.jms.JMSException: Message consumer forcibly closed due to error: org.wso2.andes.AMQDisconnectedException: Server closed connection and no failover was successful
+	at org.wso2.andes.client.BasicMessageConsumer.returnMessageOrThrow(BasicMessageConsumer.java:594)
+	at org.wso2.andes.client.BasicMessageConsumer.receive(BasicMessageConsumer.java:473)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:627)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.wso2.andes.AMQDisconnectedException: Server closed connection and no failover was successful
+	at org.wso2.andes.client.failover.FailoverHandler.run(FailoverHandler.java:192)
+	... 1 more
+
+TID: [-1234] [] [2023-02-13 10:47:55,287] ERROR {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Error receiving message for Siddhi-JMS-Consumer javax.jms.JMSException: Message consumer forcibly closed due to error: org.wso2.andes.AMQDisconnectedException: Server closed connection and no failover was successful
+	at org.wso2.andes.client.BasicMessageConsumer.returnMessageOrThrow(BasicMessageConsumer.java:594)
+	at org.wso2.andes.client.BasicMessageConsumer.receive(BasicMessageConsumer.java:473)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:627)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.wso2.andes.AMQDisconnectedException: Server closed connection and no failover was successful
+	at org.wso2.andes.client.failover.FailoverHandler.run(FailoverHandler.java:192)
+	... 1 more
+
+TID: [-1234] [] [2023-02-13 10:47:55,292] ERROR {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Error receiving message for Siddhi-JMS-Consumer javax.jms.JMSException: Message consumer forcibly closed due to error: org.wso2.andes.AMQDisconnectedException: Server closed connection and no failover was successful
+	at org.wso2.andes.client.BasicMessageConsumer.returnMessageOrThrow(BasicMessageConsumer.java:594)
+	at org.wso2.andes.client.BasicMessageConsumer.receive(BasicMessageConsumer.java:473)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:627)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.wso2.andes.AMQDisconnectedException: Server closed connection and no failover was successful
+	at org.wso2.andes.client.failover.FailoverHandler.run(FailoverHandler.java:192)
+	... 1 more
+
+TID: [-1234] [] [2023-02-13 10:47:55,289] ERROR {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Error receiving message for Siddhi-JMS-Consumer javax.jms.JMSException: Message consumer forcibly closed due to error: org.wso2.andes.AMQDisconnectedException: Server closed connection and no failover was successful
+	at org.wso2.andes.client.BasicMessageConsumer.returnMessageOrThrow(BasicMessageConsumer.java:594)
+	at org.wso2.andes.client.BasicMessageConsumer.receive(BasicMessageConsumer.java:473)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:627)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.wso2.andes.AMQDisconnectedException: Server closed connection and no failover was successful
+	at org.wso2.andes.client.failover.FailoverHandler.run(FailoverHandler.java:192)
+	... 1 more
+
+TID: [-1234] [] [2023-02-13 10:47:55,288] ERROR {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Error receiving message for Siddhi-JMS-Consumer javax.jms.JMSException: Message consumer forcibly closed due to error: org.wso2.andes.AMQDisconnectedException: Server closed connection and no failover was successful
+	at org.wso2.andes.client.BasicMessageConsumer.returnMessageOrThrow(BasicMessageConsumer.java:594)
+	at org.wso2.andes.client.BasicMessageConsumer.receive(BasicMessageConsumer.java:473)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:627)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.wso2.andes.AMQDisconnectedException: Server closed connection and no failover was successful
+	at org.wso2.andes.client.failover.FailoverHandler.run(FailoverHandler.java:192)
+	... 1 more
+
+TID: [-1234] [] [2023-02-13 10:47:55,342]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Task manager for jms consumer 1000 shutdown
+TID: [-1234] [] [2023-02-13 10:47:55,343]  INFO {org.wso2.carbon.apimgt.common.jms.JMSListener} - Stopped listening for JMS messages to listener : Siddhi-JMS-Consumer#keyManager
+TID: [-1234] [] [2023-02-13 10:47:55,344]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTransportHandler} - Starting to Shutdown the Listener...
+TID: [-1234] [] [2023-02-13 10:47:56,289]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Task manager for jms consumer 1000 shutdown
+TID: [-1234] [] [2023-02-13 10:47:56,289]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Task manager for jms consumer 1000 shutdown
+TID: [-1234] [] [2023-02-13 10:47:56,289]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Task manager for jms consumer 1000 shutdown
+TID: [-1234] [] [2023-02-13 10:47:56,289]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Task manager for Siddhi-JMS-Consumer [re-]initialized
+TID: [-1234] [] [2023-02-13 10:47:56,289]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Task manager for Siddhi-JMS-Consumer [re-]initialized
+TID: [-1234] [] [2023-02-13 10:47:56,290]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Task manager for Siddhi-JMS-Consumer [re-]initialized
+TID: [-1234] [] [2023-02-13 10:47:56,292]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Task manager for jms consumer 1000 shutdown
+TID: [-1234] [] [2023-02-13 10:47:56,292]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Task manager for Siddhi-JMS-Consumer [re-]initialized
+TID: [-1234] [] [2023-02-13 10:47:56,294]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Task manager for jms consumer 1000 shutdown
+TID: [-1234] [] [2023-02-13 10:47:56,294]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Task manager for jms consumer 1000 shutdown
+TID: [-1234] [] [2023-02-13 10:47:56,294]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Task manager for Siddhi-JMS-Consumer [re-]initialized
+TID: [-1234] [] [2023-02-13 10:47:56,294]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Task manager for Siddhi-JMS-Consumer [re-]initialized
+TID: [-1234] [] [2023-02-13 10:47:56,548] ERROR {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Error acquiring a JMS connection to : TopicConnectionFactory using JNDI properties : {java.naming.factory.initial=org.wso2.andes.jndi.PropertiesFileInitialContextFactory, transport.jms.DestinationType=topic, connectionfactory.TopicConnectionFactory=amqp://***:***@clientid/carbon?brokerlist='tcp://localhost:5672?retries='5'&connectdelay='50';tcp://localhost:5672?retries='5'&connectdelay='50';'} javax.jms.JMSException: Error creating connection: Could not open connection
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:346)
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:53)
+	at org.wso2.carbon.apimgt.common.jms.utils.JMSUtils.createConnection(JMSUtils.java:410)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.createConnection(JMSTaskManager.java:950)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.getConnection(JMSTaskManager.java:829)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:610)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.wso2.andes.AMQConnectionFailureException: Could not open connection
+	at org.wso2.andes.client.AMQConnection.<init>(AMQConnection.java:496)
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:328)
+	... 10 more
+Caused by: org.wso2.andes.transport.TransportException: Could not open connection
+	at org.wso2.andes.transport.network.mina.MinaNetworkTransport$IoConnectorCreator.connect(MinaNetworkTransport.java:224)
+	at org.wso2.andes.transport.network.mina.MinaNetworkTransport.connect(MinaNetworkTransport.java:82)
+	at org.wso2.andes.client.AMQConnectionDelegate_8_0.makeBrokerConnection(AMQConnectionDelegate_8_0.java:137)
+	at org.wso2.andes.client.AMQConnection$2.run(AMQConnection.java:641)
+	at org.wso2.andes.client.AMQConnection$2.run(AMQConnection.java:638)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.wso2.andes.client.AMQConnection.makeBrokerConnection(AMQConnection.java:638)
+	at org.wso2.andes.client.AMQConnection.<init>(AMQConnection.java:419)
+	... 11 more
+
+TID: [-1234] [] [2023-02-13 10:47:56,548] ERROR {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Error acquiring a JMS connection to : TopicConnectionFactory using JNDI properties : {java.naming.factory.initial=org.wso2.andes.jndi.PropertiesFileInitialContextFactory, transport.jms.DestinationType=topic, connectionfactory.TopicConnectionFactory=amqp://***:***@clientid/carbon?brokerlist='tcp://localhost:5672?retries='5'&connectdelay='50';tcp://localhost:5672?retries='5'&connectdelay='50';'} javax.jms.JMSException: Error creating connection: Could not open connection
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:346)
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:53)
+	at org.wso2.carbon.apimgt.common.jms.utils.JMSUtils.createConnection(JMSUtils.java:410)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.createConnection(JMSTaskManager.java:950)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.getConnection(JMSTaskManager.java:829)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:610)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.wso2.andes.AMQConnectionFailureException: Could not open connection
+	at org.wso2.andes.client.AMQConnection.<init>(AMQConnection.java:496)
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:328)
+	... 10 more
+Caused by: org.wso2.andes.transport.TransportException: Could not open connection
+	at org.wso2.andes.transport.network.mina.MinaNetworkTransport$IoConnectorCreator.connect(MinaNetworkTransport.java:224)
+	at org.wso2.andes.transport.network.mina.MinaNetworkTransport.connect(MinaNetworkTransport.java:82)
+	at org.wso2.andes.client.AMQConnectionDelegate_8_0.makeBrokerConnection(AMQConnectionDelegate_8_0.java:137)
+	at org.wso2.andes.client.AMQConnection$2.run(AMQConnection.java:641)
+	at org.wso2.andes.client.AMQConnection$2.run(AMQConnection.java:638)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.wso2.andes.client.AMQConnection.makeBrokerConnection(AMQConnection.java:638)
+	at org.wso2.andes.client.AMQConnection.<init>(AMQConnection.java:419)
+	... 11 more
+
+TID: [-1234] [] [2023-02-13 10:47:56,551] ERROR {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Error acquiring a JMS connection to : TopicConnectionFactory using JNDI properties : {java.naming.factory.initial=org.wso2.andes.jndi.PropertiesFileInitialContextFactory, transport.jms.DestinationType=topic, connectionfactory.TopicConnectionFactory=amqp://***:***@clientid/carbon?brokerlist='tcp://localhost:5672?retries='5'&connectdelay='50';tcp://localhost:5672?retries='5'&connectdelay='50';'} javax.jms.JMSException: Error creating connection: Could not open connection
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:346)
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:53)
+	at org.wso2.carbon.apimgt.common.jms.utils.JMSUtils.createConnection(JMSUtils.java:410)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.createConnection(JMSTaskManager.java:950)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.getConnection(JMSTaskManager.java:829)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:610)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.wso2.andes.AMQConnectionFailureException: Could not open connection
+	at org.wso2.andes.client.AMQConnection.<init>(AMQConnection.java:496)
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:328)
+	... 10 more
+Caused by: org.wso2.andes.transport.TransportException: Could not open connection
+	at org.wso2.andes.transport.network.mina.MinaNetworkTransport$IoConnectorCreator.connect(MinaNetworkTransport.java:224)
+	at org.wso2.andes.transport.network.mina.MinaNetworkTransport.connect(MinaNetworkTransport.java:82)
+	at org.wso2.andes.client.AMQConnectionDelegate_8_0.makeBrokerConnection(AMQConnectionDelegate_8_0.java:137)
+	at org.wso2.andes.client.AMQConnection$2.run(AMQConnection.java:641)
+	at org.wso2.andes.client.AMQConnection$2.run(AMQConnection.java:638)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.wso2.andes.client.AMQConnection.makeBrokerConnection(AMQConnection.java:638)
+	at org.wso2.andes.client.AMQConnection.<init>(AMQConnection.java:419)
+	... 11 more
+
+TID: [-1234] [] [2023-02-13 10:47:56,551] ERROR {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Error acquiring a JMS connection to : TopicConnectionFactory using JNDI properties : {java.naming.factory.initial=org.wso2.andes.jndi.PropertiesFileInitialContextFactory, transport.jms.DestinationType=topic, connectionfactory.TopicConnectionFactory=amqp://***:***@clientid/carbon?brokerlist='tcp://localhost:5672?retries='5'&connectdelay='50';tcp://localhost:5672?retries='5'&connectdelay='50';'} javax.jms.JMSException: Error creating connection: Could not open connection
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:346)
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:53)
+	at org.wso2.carbon.apimgt.common.jms.utils.JMSUtils.createConnection(JMSUtils.java:410)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.createConnection(JMSTaskManager.java:950)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.getConnection(JMSTaskManager.java:829)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:610)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.wso2.andes.AMQConnectionFailureException: Could not open connection
+	at org.wso2.andes.client.AMQConnection.<init>(AMQConnection.java:496)
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:328)
+	... 10 more
+Caused by: org.wso2.andes.transport.TransportException: Could not open connection
+	at org.wso2.andes.transport.network.mina.MinaNetworkTransport$IoConnectorCreator.connect(MinaNetworkTransport.java:224)
+	at org.wso2.andes.transport.network.mina.MinaNetworkTransport.connect(MinaNetworkTransport.java:82)
+	at org.wso2.andes.client.AMQConnectionDelegate_8_0.makeBrokerConnection(AMQConnectionDelegate_8_0.java:137)
+	at org.wso2.andes.client.AMQConnection$2.run(AMQConnection.java:641)
+	at org.wso2.andes.client.AMQConnection$2.run(AMQConnection.java:638)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.wso2.andes.client.AMQConnection.makeBrokerConnection(AMQConnection.java:638)
+	at org.wso2.andes.client.AMQConnection.<init>(AMQConnection.java:419)
+	... 11 more
+
+TID: [-1234] [] [2023-02-13 10:47:56,548] ERROR {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Error acquiring a JMS connection to : TopicConnectionFactory using JNDI properties : {java.naming.factory.initial=org.wso2.andes.jndi.PropertiesFileInitialContextFactory, transport.jms.DestinationType=topic, connectionfactory.TopicConnectionFactory=amqp://***:***@clientid/carbon?brokerlist='tcp://localhost:5672?retries='5'&connectdelay='50';tcp://localhost:5672?retries='5'&connectdelay='50';'} javax.jms.JMSException: Error creating connection: Could not open connection
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:346)
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:53)
+	at org.wso2.carbon.apimgt.common.jms.utils.JMSUtils.createConnection(JMSUtils.java:410)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.createConnection(JMSTaskManager.java:950)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.getConnection(JMSTaskManager.java:829)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:610)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.wso2.andes.AMQConnectionFailureException: Could not open connection
+	at org.wso2.andes.client.AMQConnection.<init>(AMQConnection.java:496)
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:328)
+	... 10 more
+Caused by: org.wso2.andes.transport.TransportException: Could not open connection
+	at org.wso2.andes.transport.network.mina.MinaNetworkTransport$IoConnectorCreator.connect(MinaNetworkTransport.java:224)
+	at org.wso2.andes.transport.network.mina.MinaNetworkTransport.connect(MinaNetworkTransport.java:82)
+	at org.wso2.andes.client.AMQConnectionDelegate_8_0.makeBrokerConnection(AMQConnectionDelegate_8_0.java:137)
+	at org.wso2.andes.client.AMQConnection$2.run(AMQConnection.java:641)
+	at org.wso2.andes.client.AMQConnection$2.run(AMQConnection.java:638)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.wso2.andes.client.AMQConnection.makeBrokerConnection(AMQConnection.java:638)
+	at org.wso2.andes.client.AMQConnection.<init>(AMQConnection.java:419)
+	... 11 more
+
+TID: [-1234] [] [2023-02-13 10:47:56,548] ERROR {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Error acquiring a JMS connection to : TopicConnectionFactory using JNDI properties : {java.naming.factory.initial=org.wso2.andes.jndi.PropertiesFileInitialContextFactory, transport.jms.DestinationType=topic, connectionfactory.TopicConnectionFactory=amqp://***:***@clientid/carbon?brokerlist='tcp://localhost:5672?retries='5'&connectdelay='50';tcp://localhost:5672?retries='5'&connectdelay='50';'} javax.jms.JMSException: Error creating connection: Could not open connection
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:346)
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:53)
+	at org.wso2.carbon.apimgt.common.jms.utils.JMSUtils.createConnection(JMSUtils.java:410)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.createConnection(JMSTaskManager.java:950)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.getConnection(JMSTaskManager.java:829)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:610)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.wso2.andes.AMQConnectionFailureException: Could not open connection
+	at org.wso2.andes.client.AMQConnection.<init>(AMQConnection.java:496)
+	at org.wso2.andes.client.AMQConnectionFactory.createConnection(AMQConnectionFactory.java:328)
+	... 10 more
+Caused by: org.wso2.andes.transport.TransportException: Could not open connection
+	at org.wso2.andes.transport.network.mina.MinaNetworkTransport$IoConnectorCreator.connect(MinaNetworkTransport.java:224)
+	at org.wso2.andes.transport.network.mina.MinaNetworkTransport.connect(MinaNetworkTransport.java:82)
+	at org.wso2.andes.client.AMQConnectionDelegate_8_0.makeBrokerConnection(AMQConnectionDelegate_8_0.java:137)
+	at org.wso2.andes.client.AMQConnection$2.run(AMQConnection.java:641)
+	at org.wso2.andes.client.AMQConnection$2.run(AMQConnection.java:638)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.wso2.andes.client.AMQConnection.makeBrokerConnection(AMQConnection.java:638)
+	at org.wso2.andes.client.AMQConnection.<init>(AMQConnection.java:419)
+	... 11 more
+
+TID: [-1234] [] [2023-02-13 10:47:56,557]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Task manager for jms consumer 1000 shutdown
+TID: [-1234] [] [2023-02-13 10:47:56,558]  INFO {org.wso2.carbon.apimgt.common.jms.JMSListener} - Stopped listening for JMS messages to listener : Siddhi-JMS-Consumer#throttleData
+TID: [-1234] [] [2023-02-13 10:47:56,559]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTransportHandler} - Starting to Shutdown the Listener...
+TID: [-1234] [] [2023-02-13 10:47:56,559]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Task manager for jms consumer 1000 shutdown
+TID: [-1234] [] [2023-02-13 10:47:56,560]  INFO {org.wso2.carbon.apimgt.common.jms.JMSListener} - Stopped listening for JMS messages to listener : Siddhi-JMS-Consumer#tokenRevocation
+TID: [-1234] [] [2023-02-13 10:47:56,560]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Task manager for jms consumer 1000 shutdown
+TID: [-1234] [] [2023-02-13 10:47:56,560]  INFO {org.wso2.carbon.apimgt.common.jms.JMSListener} - Stopped listening for JMS messages to listener : Siddhi-JMS-Consumer#cacheInvalidation
+TID: [-1234] [] [2023-02-13 10:47:56,561]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Task manager for jms consumer 1000 shutdown
+TID: [-1234] [] [2023-02-13 10:47:56,561]  INFO {org.wso2.carbon.apimgt.common.jms.JMSListener} - Stopped listening for JMS messages to listener : Siddhi-JMS-Consumer#notification
+TID: [-1234] [] [2023-02-13 10:47:56,562]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Task manager for jms consumer 1000 shutdown
+TID: [-1234] [] [2023-02-13 10:47:56,562]  INFO {org.wso2.carbon.apimgt.common.jms.JMSListener} - Stopped listening for JMS messages to listener : Siddhi-JMS-Consumer#throttleData
+TID: [-1234] [] [2023-02-13 10:47:56,562]  INFO {org.wso2.carbon.apimgt.common.jms.JMSTaskManager} - Task manager for jms consumer 1000 shutdown
+TID: [-1234] [] [2023-02-13 10:47:56,563]  INFO {org.wso2.carbon.apimgt.common.jms.JMSListener} - Stopped listening for JMS messages to listener : Siddhi-JMS-Consumer#asyncWebhooksData
+TID: [-1234] [] [2023-02-13 10:47:56,556] ERROR {org.apache.axis2.transport.base.threads.NativeWorkerPool} - Uncaught exception org.wso2.carbon.apimgt.common.jms.JmsRunTimeException
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager.handleException(JMSTaskManager.java:1144)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager.access$800(JMSTaskManager.java:62)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.createConnection(JMSTaskManager.java:969)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.getConnection(JMSTaskManager.java:829)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:610)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+TID: [-1234] [] [2023-02-13 10:47:56,555] ERROR {org.apache.axis2.transport.base.threads.NativeWorkerPool} - Uncaught exception org.wso2.carbon.apimgt.common.jms.JmsRunTimeException
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager.handleException(JMSTaskManager.java:1144)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager.access$800(JMSTaskManager.java:62)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.createConnection(JMSTaskManager.java:969)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.getConnection(JMSTaskManager.java:829)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:610)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+TID: [-1234] [] [2023-02-13 10:47:56,554] ERROR {org.apache.axis2.transport.base.threads.NativeWorkerPool} - Uncaught exception org.wso2.carbon.apimgt.common.jms.JmsRunTimeException
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager.handleException(JMSTaskManager.java:1144)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager.access$800(JMSTaskManager.java:62)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.createConnection(JMSTaskManager.java:969)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.getConnection(JMSTaskManager.java:829)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:610)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+TID: [-1234] [] [2023-02-13 10:47:56,557] ERROR {org.apache.axis2.transport.base.threads.NativeWorkerPool} - Uncaught exception org.wso2.carbon.apimgt.common.jms.JmsRunTimeException
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager.handleException(JMSTaskManager.java:1144)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager.access$800(JMSTaskManager.java:62)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.createConnection(JMSTaskManager.java:969)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.getConnection(JMSTaskManager.java:829)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:610)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+TID: [-1234] [] [2023-02-13 10:47:56,557] ERROR {org.apache.axis2.transport.base.threads.NativeWorkerPool} - Uncaught exception org.wso2.carbon.apimgt.common.jms.JmsRunTimeException
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager.handleException(JMSTaskManager.java:1144)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager.access$800(JMSTaskManager.java:62)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.createConnection(JMSTaskManager.java:969)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.getConnection(JMSTaskManager.java:829)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:610)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+TID: [-1234] [] [2023-02-13 10:47:56,557] ERROR {org.apache.axis2.transport.base.threads.NativeWorkerPool} - Uncaught exception org.wso2.carbon.apimgt.common.jms.JmsRunTimeException
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager.handleException(JMSTaskManager.java:1144)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager.access$800(JMSTaskManager.java:62)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.createConnection(JMSTaskManager.java:969)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.getConnection(JMSTaskManager.java:829)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.receiveMessage(JMSTaskManager.java:610)
+	at org.wso2.carbon.apimgt.common.jms.JMSTaskManager$MessageListenerTask.run(JMSTaskManager.java:533)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+TID: [-1234] [] [2023-02-13 10:47:56,598]  INFO {org.wso2.carbon.core.init.CarbonServerManager} - Shutting down OSGi framework...
+TID: [-1234] [] [2023-02-13 10:47:56,607]  INFO {org.wso2.carbon.core.init.CarbonServerManager} - Stopping CarbonServerManager...
+TID: [-1234] [] [2023-02-13 10:47:56,609]  INFO {org.wso2.carbon.websocket.transport.WebsocketTransportSender} - WSS Sender Shutdown
+TID: [-1234] [] [2023-02-13 10:47:56,609]  INFO {org.apache.synapse.transport.passthru.PassThroughHttpSender} - HTTP Sender shutdown
+TID: [-1234] [] [2023-02-13 10:47:56,611]  INFO {org.wso2.carbon.websocket.transport.WebsocketTransportSender} - WS Sender Shutdown
+TID: [-1234] [] [2023-02-13 10:47:56,611]  INFO {org.apache.synapse.transport.passthru.PassThroughHttpSSLSender} - HTTPS Sender shutdown
+TID: [-1234] [] [2023-02-13 10:47:56,612]  INFO {org.apache.synapse.transport.passthru.PassThroughHttpListener} - Destroying PassThroughHttpListener
+TID: [-1234] [] [2023-02-13 10:47:56,612]  INFO {org.apache.synapse.transport.passthru.PassThroughHttpMultiSSLListener} - Destroying PassThroughHttpListener
+TID: [-1234] [] [2023-02-13 10:47:56,676]  INFO {org.apache.synapse.Axis2SynapseController} - Undeploying the Synapse service...
+TID: [-1234] [] [2023-02-13 10:47:56,677]  INFO {org.apache.synapse.Axis2SynapseController} - Undeploying Proxy services...
+TID: [-1234] [] [2023-02-13 10:47:56,677]  INFO {org.apache.synapse.Axis2SynapseController} - Undeploying EventSources...
+TID: [-1234] [] [2023-02-13 10:47:56,680]  INFO {org.apache.synapse.inbound.InboundEndpoint} - Destroying Inbound Endpoint: WebSocketInboundEndpoint
+TID: [-1234] [] [2023-02-13 10:47:56,682]  INFO {org.apache.synapse.inbound.InboundEndpoint} - Destroying Inbound Endpoint: SecureWebSocketEP
+TID: [-1234] [] [2023-02-13 10:47:56,683]  INFO {org.apache.synapse.inbound.InboundEndpoint} - Destroying Inbound Endpoint: WebhookServer
+TID: [-1234] [] [2023-02-13 10:47:56,683]  INFO {org.apache.synapse.transport.passthru.core.PassThroughListeningIOReactorManager} - Closing Endpoint Listener for port 9022
+TID: [-1234] [] [2023-02-13 10:47:57,684]  INFO {org.apache.synapse.transport.passthru.core.PassThroughListeningIOReactorManager} - Successfully closed Endpoint Listener for port 9022
+TID: [-1234] [] [2023-02-13 10:47:57,685]  INFO {org.apache.synapse.inbound.InboundEndpoint} - Destroying Inbound Endpoint: SecureWebhookServer
+TID: [-1234] [] [2023-02-13 10:47:57,685]  INFO {org.apache.synapse.transport.passthru.core.PassThroughListeningIOReactorManager} - Closing Endpoint Listener for port 8022
+TID: [-1234] [] [2023-02-13 10:47:58,686]  INFO {org.apache.synapse.transport.passthru.core.PassThroughListeningIOReactorManager} - Successfully closed Endpoint Listener for port 8022
+TID: [-1234] [] [2023-02-13 10:47:58,698]  INFO {org.apache.synapse.api.API} - {api:_OpenService_} Destroying API: _OpenService_
+TID: [-1234] [] [2023-02-13 10:47:58,702]  INFO {org.apache.synapse.task.SynapseTaskManager} - Shutting down the task manager
+TID: [-1234] [] [2023-02-13 10:47:58,708]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} - Stopped JMX reporter for Metrics
+TID: [-1234] [] [2023-02-13 10:47:58,765]  INFO {org.wso2.carbon.tomcat.ext.internal.CarbonTomcatServiceComponent} - Stopping the carbon web-app registered under : /
+TID: [-1234] [] [2023-02-13 10:47:59,253]  INFO {org.wso2.carbon.core.init.CarbonServerManager} - Shutdown complete 
+TID: [-1234] [] [2023-02-13 10:47:59,253]  INFO {org.wso2.carbon.core.init.CarbonServerManager} - Halting JVM 

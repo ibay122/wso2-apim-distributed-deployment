@@ -1,0 +1,1 @@
+TID: [-1234] [2023-02-13 10:46:00,865]  INFO {AUDIT_LOG} - Initiator=wso2.system.user Action=Get-Roles-of-User Target=admin Data={"Filter":"*","Roles":["Internal/subscriber","Internal/creator","Internal/publisher","Internal/everyone","Internal/devops","admin","Internal/analytics"]} Outcome=Success
